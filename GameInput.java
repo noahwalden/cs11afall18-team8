@@ -15,6 +15,12 @@ public class GameInput {
       case "west":
       case "w":
     }
-
   }
+
+// room 5 choices
+  public static void Choice5()
+  String decisions = TextIO.getlnString();
+  System.out.println("You see a red button, what to do?");
+
+
 }
