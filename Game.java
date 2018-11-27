@@ -2,6 +2,8 @@ public class Game {
   public static void main(String[] args) {
     introSequence()
     RoomDescriptions.prisonCell();
+    GameInput.main()
+
   }
   public static void introSequence(String[] args) {
     System.out.println("The Boolin' Operators' Text Adventure Game");

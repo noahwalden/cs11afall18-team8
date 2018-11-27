@@ -22,3 +22,9 @@ public static void Alienroom1(String[] args) {
   System.out.println("This room seems to be empty except for one thing in the corner that seems to be breathing");
   System.out.println("You can either return return east or move west risking waking the thing in the corner.");
 }
+
+//room 5
+public static void surveillanceRoom(String[] agrs) {
+  System.out.println("Surveillance room:");
+  System.out.println("You enter a room filled with screens of what seems to be the ship.")
+  System.out.println("You notice alien symbols which you can comprehend.");
