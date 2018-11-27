@@ -19,6 +19,5 @@ public static void barracks(String[] args) {
 public static void surveillanceRoom(String[] agrs) {
   System.out.println("Surveillance room:");
   System.out.println("You enter a room filled with screens of what seems to be the ship.")
-  System.out.println("You constantly notice alien symbols which you can comprehend.");
-  System.out.println("You see a red button, what to do?");
+  System.out.println("You notice alien symbols which you can comprehend.");
 }

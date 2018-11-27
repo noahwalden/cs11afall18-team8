@@ -1,27 +1,33 @@
 import java.util.Scanner;
 public class GameInput {
-  public static void prisonCell(String[] args) {
+  public static void main(String[] args) {
     Scanner myScanner = new Scanner(System.in);
     System.out.println("> ");
     String input = myScanner.nextLine();
     switch(input) {
       case "north":
       case "n":
-        return "n"; break;
+      return input; break;
       case "east":
       case "e":
-        return "e"; break;
       case "south":
       case "s":
-        return "s"; break;
       case "west":
       case "w":
-        return "w"; break;
-      case ""
     }
   }
 
-  public static void error() {
-    System.out.println("Sorry, you can't do that.");
+  // room 5 choices
+  public static void Choice5(String[] args) {
+    String input = myScanner.nextLine();
+    System.out.println("You see a red button, what to do?");
+    System.out.println("To press the button, press p. To leave it alone, press l");
+    switch(input) {
+      case "p":
+        System.out.println("All the cameras are now shut down, well done.");
+      case "l": 
+        System.out.println("You must now ")
+    }
+
   }
 }
