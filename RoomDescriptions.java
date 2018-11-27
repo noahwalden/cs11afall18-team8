@@ -6,7 +6,7 @@ public class RoomDescriptions {
   public static void prisonCell(String[] args) {
     System.out.println("Prison Cell");
     System.out.println("The cell is dark and covered in alien slime.");
-    System.out.println("The cell door, slightly ajar, is located to the north.");
+    System.out.println("The cell door, slightly ajar, is located to the east.");
   }
 }
 // room 1
@@ -17,7 +17,7 @@ public static void Barracks(String[] args) {
 }
 
 // room 7
-public static void (String[] args) {
+public static void Alienroom1(String[] args) {
   System.out.println("1st Alien Room");
   System.out.println("This room seems to be empty except for one thing in the corner that seems to be breathing");
   System.out.println("You can either return return east or move west risking waking the thing in the corner.");
