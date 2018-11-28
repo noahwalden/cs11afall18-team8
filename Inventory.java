@@ -26,12 +26,16 @@ public class Inventory {
     }
 
     Scanner input = new Scanner(System.in);
-    while (true) {
-    System.out.print("Enter the number of the inventory slot where you want to store this item: ");
-    int slot = input.nextInt();
+    main while (true) {
+      System.out.print("Enter the number of the inventory slot where you want to store this item: ");
+      int slot = input.nextInt();
+      while (slot < 1 || slot > 5) {
+        System.out.println("That is not a valid slot number. Please try again.");
+        slot = input.nextInt();
+      }
       if (inventory[slot-1].equalsIgnoreCase("empty")) {
         inventory[slot-1] = item;
-        break;
+        break main;
       }
       else {
         System.out.println("There's already something in this slot!");
@@ -47,15 +51,19 @@ public class Inventory {
       return;
     }
     Scanner input = new Scanner(System.in);
-    while (true) {
-    System.out.print("Enter the number of the inventory slot whose contents you want to drop: ");
-    int slot = input.nextInt();
+    main while (true) {
+      System.out.print("Enter the number of the inventory slot whose contents you want to drop: ");
+      int slot = input.nextInt();
+      while (slot < 1 || slot > 5) {
+        System.out.println("That is not a valid slot number. Please try again.");
+        slot = input.nextInt();
+      }
       if (!inventory[slot-1].equalsIgnoreCase("empty")) {
         inventory[slot-1] = "empty";
         System.out.print("Do want to drop another item?(enter \"yes\" or \"no\")");
         String answer = input.nextLine();
         if(!answer.equalsIgnoreCase("yes")) {
-          break;
+          break main;
         }
       }
       else {
