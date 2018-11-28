@@ -19,5 +19,5 @@ public static void prisonCell(String[] args) {
 public static void surveillanceRoom(String[] agrs) {
   System.out.println("Surveillance room:");
   System.out.println("You enter a room filled with screens of what seems to be the ship.")
-  System.out.println("You notice alien symbols which you can comprehend.");
+  System.out.println("You notice alien symbols which you can't comprehend.");
 }

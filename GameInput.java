@@ -17,11 +17,11 @@ public class GameInput {
     }
   }
 
-  // room 5 choices
+  // room 5 action
   public static void Choice5(String[] args) {
     System.out.println("You see a red button, what to do?");
-    String input = myScanner.nextLine();
     System.out.println("To press the button, press p. To leave it alone, press l");
+    String input = myScanner.nextLine();
     switch(input) {
       case "p":
         System.out.println("All the cameras are now shut down");
@@ -29,9 +29,14 @@ public class GameInput {
         System.out.println("You notice guards may be coming your way, it's time to go");
     }
     System.out.println("You see another door going South.");
-    System.out.println("To enter the new room, press S.");
-    System.out.println("To return to the Barracks, press B.");
+    System.out.println("To enter the new room, press s.");
+    System.out.println("To return to the Barracks, press b.");
     String input = myScanner.nextLine();
+    switch(input) {
+      case "s":
+        System.out.println("You now enter an unknown room");
+      case "b":
+    }
 
   }
 }
