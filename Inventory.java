@@ -9,6 +9,7 @@ public class Inventory {
     for (int i = 0; i < inventory.length; i++) {
       System.out.printf("Slot %d: %8s%n",i + 1,inventory[i]);
     }
+    System.out.println();
   }
 
   public static void addToInventory(String item) {
