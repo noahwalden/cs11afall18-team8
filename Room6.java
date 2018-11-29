@@ -2,18 +2,29 @@ import java.util.Scanner;
 
 public class Room6 {
 
+  public static boolean hasExplored = false;
+
   public static void main(String[] args) {
     room6();
   }
   public static void room6() {
-    System.out.println("You enter the room and find yourself in what appears to");
-    System.out.println("be the sleeping quarters of the ship.");
-    System.out.println("An alien sleeps in one of the beds across the room.");
     System.out.println();
-    firstChoice();
-
+    if (hasExplored) {
+      System.out.println("You have already explored this room.");
+      System.out.println();
+      leaveRoom();
+    }
+    else {
+      System.out.println("You enter the room and find yourself in what appears to");
+      System.out.println("be the sleeping quarters of the ship.");
+      System.out.println("An alien sleeps in one of the beds across the room.");
+      System.out.println();
+      firstChoice();
+    }
   }
-  public static void firstChoice() {
+
+  private static void firstChoice() {
+    hasExplored = true;
     boolean hasLooked = false;
     String answer = "a";
     while (answer.equals('a' + "")) {
@@ -48,12 +59,15 @@ public class Room6 {
       else if (answer.equals('b' + "")) {
         killAlien();
       }
+      else if (answer.equals('c' + "")) {
+        sneakPast();
+      }
       else {
 
       }
     }
   }
-  public static void lookAround() {
+  private static void lookAround() {
     System.out.println("You look around and see a lead pipe on the floor.");
     System.out.println("Do you pick it up?");
     System.out.println("  A) Yes");
@@ -75,7 +89,7 @@ public class Room6 {
     }
   }
 
-  public static void killAlien() {
+  private static void killAlien() {
     String item = Inventory.chooseItem();
     int hits = (int)Math.floor(Math.random()*6.0);
     System.out.println("You hit the alien with your " + item + ".");
@@ -84,6 +98,34 @@ public class Room6 {
     }
     System.out.println("The alien is dead.");
     System.out.println();
+    leaveRoom();
+  }
+
+  private static void sneakPast() {
+    System.out.println("You attempt to sneak past the alien.");
+    System.out.println();
+    int chanceWakesUp = (int)Math.floor(Math.random()*101);
+    if (chanceWakesUp >= 75) {
+      sneakSuccess();
+    }
+    else {
+      fightAlien();
+    }
+  }
+
+  private static void sneakSuccess() {
+    System.out.println("You successfully sneak past the alien!");
+    leaveRoom();
+  }
+
+  private static void fightAlien() {
+    System.out.println("The alien wakes up!");
+    System.out.println("Quick, hit him with something!");
+    System.out.println();
+    killAlien();
+  }
+
+  private static void leaveRoom() {
     System.out.println("Which door do you want to leave through?");
     System.out.println("  A) The Eastern door");
     System.out.println("  B) The Southern door");
