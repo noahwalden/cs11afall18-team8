@@ -17,7 +17,7 @@ public class Room8 {
     }
     else {
       System.out.println(RoomDescriptions.prisonCell());
-      if (cardPickup == False) {
+      if (cardPickup == false) {
         System.out.println("A keycard is lying on the ground.");
       }
       System.out.println();
@@ -58,7 +58,5 @@ public class Room8 {
     System.out.println("You pick up the keycard.");
     System.out.println();
     Inventory.addToInventory("keycard");
-    }
   }
-
 }
