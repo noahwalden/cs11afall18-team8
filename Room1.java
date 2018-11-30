@@ -15,14 +15,7 @@ public class Room1 {
       System.out.println();
       leaveRoom();
     }
-    else {
-      System.out.println(RoomDescriptions.Barracks());
-      if (pipe == False) {
-        System.out.println("A banana is lying on the ground.");
-      }
-      System.out.println();
-      firstChoice();
-    }
+
   }
 
   private static void chooseAction() {
@@ -81,11 +74,9 @@ public class Room1 {
       else if (answer.equals('b' + "")) {
       //use room7 method
       }
-      private static void goback(){
+      }
+      private static void goback() {
         System.out.println("ARE YOU AN IDIOT");
         chooseAction();
       }
-      }
   }
-
-}
