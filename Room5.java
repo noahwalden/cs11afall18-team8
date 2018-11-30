@@ -4,14 +4,14 @@ public class Room5 {
 
   public static boolean hasExplored = false;
 
-public static void Room5(){
-  System.out.println();
-  if hasExplored{
-    System.out.println("You have already explored this room.");
+  public static void Room5(){
     System.out.println();
-    leaveRoom();
+    if(hasExplored){
+      System.out.println("You have already explored this room.");
+      System.out.println();
+      leaveRoom();
+    }
   }
-}
 
   public static void main (String[] args) {
     Scanner myScanner = new Scanner(System.in);
@@ -42,17 +42,35 @@ public static void Room5(){
     System.out.println("You see another door going South.");
     System.out.println("To enter the new room, press s.");
     System.out.println("To return to the Barracks, press b.");
+    System.out.println();
     String secondDecision = myScanner.nextLine();
     switch(secondDecision) {
       case "s":
       case "b":
     }
+  }
 
-    private static void leaveRoom() {
-      System.out.println("Which door do you want to leave through?");
-      System.out.println("  A) The Eastern door");
-      System.out.println("  B) The Southern door");
-      System.out.println("  C) The Western door");
+  private static void leaveRoom(){
+    Scanner myScanner = new Scanner(System.in);
+    System.out.println("Which door do you want to leave through?");
+    System.out.println("  A) The Southern door");
+    System.out.println("  B) Back to the barracks");
 
+    String thirdDecision = myScanner.nextLine();
+    thirdDecision = thirdDecision.toLowerCase();
+    while ((!thirdDecision.equals('a' + "")) && (!thirdDecision.equals('b' + "")) &&
+    (!thirdDecision.equals('c' + ""))) {
+      System.out.println("That answer is not valid. Please try again.");
+      thirdDecision = input.nextLine();
+      System.out.println();
+      System.out.println();
+      answer = thirdDecision.toLowerCase();
+    }
+    if (thirdDecision.equals('a' + "")) {
+      //use room1 method
+    }
+    else if (answer.equals('b' + "")) {
+      //use room4 method
+    }
   }
 }

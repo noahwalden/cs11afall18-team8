@@ -1,20 +1,15 @@
 import java.util.Scanner;
 public class GameInput {
-  public static void main(String[] args) {
+  public static String letterInput() {
     Scanner myScanner = new Scanner(System.in);
     System.out.println("> ");
-    String input = myScanner.nextLine();
-    switch(input) {
-      case "north":
-      case "n":
-      return input; break;
-      case "east":
-      case "e":
-      case "south":
-      case "s":
-      case "west":
-      case "w":
+    String x = myScanner.nextLine().toLowerCase();
+    while ((!x.equals("a")) && (!x.equals("b")) && (!x.equals("c")) && (!x.equals("d"))) {
+      System.out.println("That answer is not valid. Please try again.");
+      System.out.println("> ");
+      x = myScanner.nextLine().toLowerCase();
     }
+    return x;
   }
 
   // room 5 action
@@ -25,17 +20,9 @@ public class GameInput {
     String input = myScanner.nextLine();
     switch(input) {
       case "p":
-        System.out.println("All the cameras are now shut down");
+        System.out.println("All the cameras are now shut down, well done.");
       case "l":
-        System.out.println("You notice guards may be coming your way, it's time to go");
-    }
-    System.out.println("You see another door going South.");
-    System.out.println("To enter the new room, press s.");
-    System.out.println("To return to the Barracks, press b.");
-    String input = myScanner.nextLine();
-    switch(input) {
-      case "s":
-      case "b":
+        System.out.println("You must now ");
     }
 
   }
