@@ -4,10 +4,13 @@ public class Room6 {
 
   public static boolean hasExplored = false;
 
+  private static int lastRoom = 0;
+
   public static void main(String[] args) {
     room6();
   }
-  public static void room6() {
+  public static void room6(int previousRoom) {
+    lastRoom = previousRoom;
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
@@ -63,7 +66,7 @@ public class Room6 {
         sneakPast();
       }
       else {
-
+        previousRoom();
       }
     }
   }
@@ -123,6 +126,18 @@ public class Room6 {
     System.out.println("Quick, hit him with something!");
     System.out.println();
     killAlien();
+  }
+
+  private static void previousRoom() {
+    if (lastRoom == 3) {
+      //use room3 method
+    }
+    else if (lastRoom == 4) {
+      //use room4 method
+    }
+    else {
+      //use room7 method
+    }
   }
 
   private static void leaveRoom() {
