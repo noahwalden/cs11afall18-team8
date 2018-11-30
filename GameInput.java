@@ -12,12 +12,12 @@ public class GameInput {
     return x;
   }
 
-  // room 5 choices
-  public static void Choice5() {
-    Scanner myScanner = new Scanner(System.in);
-    String input = myScanner.nextLine();
+  // room 5 action
+  public static void Choice5(String[] args) {
+
     System.out.println("You see a red button, what to do?");
     System.out.println("To press the button, press p. To leave it alone, press l");
+    String input = myScanner.nextLine();
     switch(input) {
       case "p":
         System.out.println("All the cameras are now shut down, well done.");
