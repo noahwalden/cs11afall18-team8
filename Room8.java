@@ -12,7 +12,7 @@ public class Room8 {
     System.out.println();
     if (hasExplored) {
       System.out.printf("You have already explored this room.%n");
-      Room1();
+      Room1.main();
     } else {
       RoomDescriptions.prisonCell();
       chooseAction();
@@ -31,7 +31,7 @@ public class Room8 {
 
       switch(answer) {
         case "a": lookAround(); break;
-        case "b": Room1(); break; //Call to Room1 class file
+        case "b": Room1.main(); break; //Call to Room1 class file
         case "c": callHelp(); break;
         case "d":
           getKeycard(); break;
