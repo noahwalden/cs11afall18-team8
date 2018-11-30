@@ -20,17 +20,16 @@ public class Room1 {
 
   private static void chooseAction() {
     hasExplored = true;
-    while (answer.equals('a' + "")) {
+
       System.out.println("What do you do?");
       System.out.println("  A) Look around");
       System.out.println("  B) Leave room");
       System.out.println("  C) Pick up the banana.");
       System.out.println("  D) Go Back to your cell");
-      answer = GameInput.letterInput();
-    }
+      String answer = GameInput.letterInput();
     switch(answer) {
       case "a": lookAround(); break;
-      case "b": LeaveRoom(); break; //Call to Room1 class file
+      case "b": leaveRoom(); break; //Call to Room1 class file
       case "c": getbanana(); break;
       case "d": goback(); break;
     }
