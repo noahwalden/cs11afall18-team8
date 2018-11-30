@@ -30,4 +30,8 @@ public class Game {
 
     System.out.println(line);
   }
+
+  public static void clearConsole() {
+    System.out.print("\033[H\033[2J");
+  }
 }
