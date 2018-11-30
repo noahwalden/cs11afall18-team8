@@ -5,41 +5,39 @@ public class Room8 {
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
 
-  public static void main(String[] args) {
+  public static void main() {
     room8();
   }
   public static void room8() {
     System.out.println();
     if (hasExplored) {
-      System.out.println("You have already explored this room.");
-      System.out.println();
-      leaveRoom();
-    }
-    else {
+      System.out.printf("You have already explored this room.%n");
+      Room1();
+    } else {
       System.out.println(RoomDescriptions.prisonCell());
-      if (cardPickup == False) {
-        System.out.println("A keycard is lying on the ground.");
-      }
       System.out.println();
-      firstChoice();
+      chooseAction();
     }
   }
 
   private static void chooseAction() {
+    String answer;
     hasExplored = true;
     while (answer.equals('a' + "")) {
       System.out.println("What do you do?");
       System.out.println("  A) Look around for more details.");
       System.out.println("  B) Exit through the door to the east.");
-      System.out.println("  C) Pick up the keycard.");
-      System.out.println("  D) Call for help.");
+      System.out.println("  C) Call for help.");
+      System.out.println("  D) Pick up the keycard.");
       answer = GameInput.letterInput();
-    }
-    switch(answer) {
-      case "a": lookAround(); break;
-      case "b": Room1(); break; //Call to Room1 class file
-      case "c": getKeycard(); break;
-      case "d": callHelp(); break;
+
+      switch(answer) {
+        case "a": lookAround(); break;
+        case "b": Room1(); break; //Call to Room1 class file
+        case "c": callHelp(); break;
+        case "d":
+          getKeycard(); break;
+      }
     }
   }
 
@@ -55,10 +53,19 @@ public class Room8 {
   }
 
   private static void getKeycard() {
-    System.out.println("You pick up the keycard.");
-    System.out.println();
-    Inventory.addToInventory("keycard");
+    if (cardPickup == false) {
+      cardPickup = true;
+      System.out.println("You pick up the keycard.");
+      System.out.println();
+      Inventory.addToInventory("keycard");
+    } else {
+      System.out.println("You already have the keycard.");
     }
   }
 
+  private static void callHelp() {
+    String line = "You call out for help, but you receive no response other" +
+                  "than your own voice echoing back at you.";
+    System.out.println(line);
+  }
 }
