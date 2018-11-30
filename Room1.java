@@ -15,9 +15,12 @@ public class Room1 {
       System.out.println();
       leaveRoom();
     }
+    else{
+    RoomDescriptions.Barracks();
+    chooseAction();
 
   }
-
+}
   private static void chooseAction() {
     hasExplored = true;
 
