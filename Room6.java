@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Room6 {
 
   public static boolean hasExplored = false;
+  private static int alienHP = 100;
+  private static int alienPow = 30;
 
   private static int lastRoom = 0;
 
@@ -56,7 +58,7 @@ public class Room6 {
         }
       }
       else if (answer.equals('b' + "")) {
-        killAlien();
+        fightAlien();
       }
       else if (answer.equals('c' + "")) {
         sneakPast();
@@ -88,17 +90,17 @@ public class Room6 {
     }
   }
 
-  private static void killAlien() {
-    String item = Inventory.chooseItem();
-    int hits = (int)Math.floor(Math.random()*6.0);
-    System.out.println("You hit the alien with your " + item + ".");
-    for (int i = 1; i <= hits; i++) {
-      System.out.println("He's not dead! You hit him again.");
-    }
-    System.out.println("The alien is dead.");
-    System.out.println();
-    leaveRoom();
-  }
+  // private static void killAlien() {
+  //   String item = Inventory.chooseItem();
+  //   int hits = (int)Math.floor(Math.random()*6.0);
+  //   System.out.println("You hit the alien with your " + item + ".");
+  //   for (int i = 1; i <= hits; i++) {
+  //     System.out.println("He's not dead! You hit him again.");
+  //   }
+  //   System.out.println("The alien is dead.");
+  //   System.out.println();
+  //   leaveRoom();
+  // }
 
   private static void sneakPast() {
     System.out.println("You attempt to sneak past the alien.");
@@ -121,7 +123,8 @@ public class Room6 {
     System.out.println("The alien wakes up!");
     System.out.println("Quick, hit him with something!");
     System.out.println();
-    killAlien();
+    Combat.fight(alienHP, alienPow);
+    leaveRoom();
   }
 
   private static void previousRoom() {
