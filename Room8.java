@@ -9,7 +9,7 @@ public class Room8 {
     System.out.println();
     if (hasExplored) {
       System.out.printf("You have already explored this room.%n");
-      Room1.main();
+      Room1.room1();
     } else {
       RoomDescriptions.prisonCell();
       chooseAction();
@@ -23,7 +23,9 @@ public class Room8 {
       System.out.println("  A) Look around for more details.");
       System.out.println("  B) Exit through the door to the east.");
       System.out.println("  C) Call for help.");
-      System.out.println("  D) Pick up the keycard.");
+      if (!cardPickup) {
+        System.out.println("  D) Pick up the keycard.");
+      }
       answer = GameInput.letterInput();
 
       switch(answer) {
@@ -44,6 +46,7 @@ public class Room8 {
       System.out.println("There's nothing else to see here.");
       System.out.println();
     }
+    chooseAction();
   }
 
   private static void getKeycard() {
@@ -55,11 +58,13 @@ public class Room8 {
     } else {
       System.out.println("You already have the keycard.");
     }
+    chooseAction();
   }
 
   private static void callHelp() {
-    String line = "You call out for help, but you receive no response other" +
-                  "than your own voice echoing back at you.";
+    String line = "You call out for help, but you receive no response other\n" +
+                  "than your own voice echoing back at you.\n";
     System.out.println(line);
+    chooseAction();
   }
 }
