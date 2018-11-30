@@ -13,6 +13,7 @@ public class Game {
     Scanner ms = new Scanner(System.in);
     System.out.println("Show intro sequence? (y/n): ");
     String input = ms.nextLine();
+    System.out.println();
     if(input.equals("y")) {
       backstory();
     }
@@ -32,7 +33,7 @@ public class Game {
                   "to escape.\n";
 
     System.out.println(line);
-    System.out.println("Press <enter> to continue...");
+    System.out.print("Press <enter> to continue...");
     String uselessVariable = myScanner.nextLine();
   }
 
