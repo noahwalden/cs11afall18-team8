@@ -1,15 +1,15 @@
 import java.util.Scanner;
 public class GameInput {
-  public static String letterInput(String input) {
+  public static String letterInput() {
     Scanner myScanner = new Scanner(System.in);
     System.out.println("> ");
     String x = myScanner.nextLine().toLowerCase();
     while ((!x.equals("a")) && (!x.equals("b")) && (!x.equals("c")) && (!x.equals("d"))) {
       System.out.println("That answer is not valid. Please try again.");
       System.out.println("> ");
-      input = myScanner.nextLine().toLowerCase();
+      x = myScanner.nextLine().toLowerCase();
     }
-    return input;
+    return x;
   }
 
   // room 5 choices
