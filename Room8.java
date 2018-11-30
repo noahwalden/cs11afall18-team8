@@ -14,8 +14,7 @@ public class Room8 {
       System.out.printf("You have already explored this room.%n");
       Room1();
     } else {
-      System.out.println(RoomDescriptions.prisonCell());
-      System.out.println();
+      RoomDescriptions.prisonCell();
       chooseAction();
     }
   }
@@ -23,7 +22,6 @@ public class Room8 {
   private static void chooseAction() {
     String answer;
     hasExplored = true;
-    while (answer.equals('a' + "")) {
       System.out.println("What do you do?");
       System.out.println("  A) Look around for more details.");
       System.out.println("  B) Exit through the door to the east.");
@@ -39,7 +37,6 @@ public class Room8 {
           getKeycard(); break;
       }
     }
-  }
 
   private static void lookAround() {
     if (!hasLooked) {
