@@ -9,7 +9,7 @@ public class Room8 {
     System.out.println();
     if (hasExplored) {
       System.out.printf("You have already explored this room.%n");
-      Room1.main();
+      Room1.room1();
     } else {
       RoomDescriptions.prisonCell();
       chooseAction();
