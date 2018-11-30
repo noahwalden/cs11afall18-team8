@@ -18,7 +18,7 @@ public class Room1 {
     else{
     RoomDescriptions.Barracks();
     chooseAction();
-
+}
   }
 }
   private static void chooseAction() {
