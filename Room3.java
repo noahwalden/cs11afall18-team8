@@ -1,14 +1,12 @@
 import java.util.Scanner;
 
-public class Room6 {
+public class Room3 {
 
   public static boolean hasExplored = false;
-  private static int alienHP = 100;
-  private static int alienPow = 30;
 
   private static int lastRoom = 0;
 
-  public static void room6(int previousRoom) {
+  public static void room3(int previousRoom) {
     lastRoom = previousRoom;
     System.out.println();
     if (hasExplored) {
@@ -17,9 +15,8 @@ public class Room6 {
       leaveRoom();
     }
     else {
-      System.out.println("You enter the room and find yourself in what appears to");
-      System.out.println("be the sleeping quarters of the ship.");
-      System.out.println("An alien sleeps in one of the beds across the room.");
+      System.out.println("You've found the cafeteria!");
+      System.out.println("An alien sits at a table eating a piece of apple strudel.");
       System.out.println();
       firstChoice();
     }
@@ -31,8 +28,8 @@ public class Room6 {
     while (answer.equals('a' + "")) {
       System.out.println("What do you do?");
       System.out.println("  A) Look around for more details.");
-      System.out.println("  B) Kill the alien in his sleep.");
-      System.out.println("  C) Try to sneak past the alien.");
+      System.out.println("  B) Sit down to eat with the alien.");
+      System.out.println("  C) Raid the kitchen for yams.");
       System.out.println("  D) Leave the way you came.");
       Scanner response = new Scanner(System.in);
       answer = response.nextLine();
@@ -58,18 +55,19 @@ public class Room6 {
         }
       }
       else if (answer.equals('b' + "")) {
-        fightAlien();
+        sitDown();
       }
       else if (answer.equals('c' + "")) {
-        sneakPast();
+        getYams();
       }
       else {
         previousRoom();
       }
     }
   }
+
   private static void lookAround() {
-    System.out.println("You look around and see a lead pipe on the floor.");
+    System.out.println("You look around and see a pumpkin on the table.");
     System.out.println("Do you pick it up?");
     System.out.println("  A) Yes");
     System.out.println("  B) No");
@@ -86,72 +84,45 @@ public class Room6 {
       answer = answer.toLowerCase();
     }
     if (answer.equals('a' + "")) {
-      Inventory.addToInventory("lead pipe");
+      Inventory.addToInventory("pumpkin");
     }
   }
 
-  // private static void killAlien() {
-  //   String item = Inventory.chooseItem();
-  //   int hits = (int)Math.floor(Math.random()*6.0);
-  //   System.out.println("You hit the alien with your " + item + ".");
-  //   for (int i = 1; i <= hits; i++) {
-  //     System.out.println("He's not dead! You hit him again.");
-  //   }
-  //   System.out.println("The alien is dead.");
-  //   System.out.println();
-  //   leaveRoom();
-  // }
-
-  private static void sneakPast() {
-    System.out.println("You attempt to sneak past the alien.");
-    System.out.println();
-    int chanceWakesUp = (int)Math.floor(Math.random()*101);
-    if (chanceWakesUp >= 75) {
-      sneakSuccess();
-    }
-    else {
-      fightAlien();
-    }
-  }
-
-  private static void sneakSuccess() {
-    System.out.println("You successfully sneak past the alien!");
+  private static void sitDown() {
+    System.out.println("You get yourself a piece of strudel and");
+    System.out.println("have a nice lunch with the alien.");
     leaveRoom();
   }
 
-  private static void fightAlien() {
-    System.out.println("The alien wakes up!");
-    System.out.println("Quick, hit him with something!");
+  private static void getYams() {
+    int yams = (int)Math.floor(Math.random()*6.0);
+    System.out.printf("You raid the kitchen and find %d yams.%n",yams);
     System.out.println();
-    Combat.fight(alienHP, alienPow);
+    System.out.println("Congradulations.");
+    System.out.println();
     leaveRoom();
   }
 
   private static void previousRoom() {
-    if (lastRoom == 3) {
-      Room3.room3(6);
-    }
-    else if (lastRoom == 4) {
-      //use room4 method
+    if (lastRoom == 6) {
+      Room6.room6(3);
     }
     else {
-      //use room7 method
+      //use room2 method
     }
   }
 
   private static void leaveRoom() {
     hasExplored = true;
     System.out.println("Which door do you want to leave through?");
-    System.out.println("  A) The Eastern door");
-    System.out.println("  B) The Southern door");
-    System.out.println("  C) The Western door");
+    System.out.println("  A) The Northern door");
+    System.out.println("  B) The Western door");
     Scanner input = new Scanner(System.in);
     String answer = input.nextLine();
     System.out.println();
     System.out.println();
     answer = answer.toLowerCase();
-    while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
-    (!answer.equals('c' + ""))) {
+    while ((!answer.equals('a' + "")) && (!answer.equals('b' + ""))) {
       System.out.println("That answer is not valid. Please try again.");
       answer = input.nextLine();
       System.out.println();
@@ -159,13 +130,10 @@ public class Room6 {
       answer = answer.toLowerCase();
     }
     if (answer.equals('a' + "")) {
-    //use room7 method
-    }
-    else if (answer.equals('b' + "")) {
-      Room3.room3(6);
+      Room6.room6(3);
     }
     else {
-    //use room4 method
+      //use room4 method
     }
   }
 }
