@@ -15,7 +15,7 @@ public class Room5 {
     }
   }
 
-  public static void main (String[] args) {
+  public static void Action() {
     Scanner myScanner = new Scanner(System.in);
 
     System.out.println();
@@ -33,7 +33,8 @@ public class Room5 {
     switch(firstDecision) {
       case "p":
       System.out.println();
-      System.out.println("Well done. All the cameras are now shut down");
+      System.out.println("Well done. All the cameras are now shut down.");
+      System.out.println("You hear footsteps, it's time to go.");
       break;
       case "l":
       System.out.println();
@@ -48,7 +49,7 @@ public class Room5 {
     String secondDecision = myScanner.nextLine();
     switch(secondDecision) {
       case "s":
-      case "b":
+      case "b": Room1.room1();
     }
   }
 
