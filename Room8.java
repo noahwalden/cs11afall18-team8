@@ -5,9 +5,6 @@ public class Room8 {
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
 
-  public static void main() {
-    room8();
-  }
   public static void room8() {
     System.out.println();
     if (hasExplored) {
@@ -31,7 +28,7 @@ public class Room8 {
 
       switch(answer) {
         case "a": lookAround(); break;
-        case "b": Room1.main(); break; //Call to Room1 class file
+        case "b": Room1.room1(); break; //Call to Room1 class file
         case "c": callHelp(); break;
         case "d":
           getKeycard(); break;

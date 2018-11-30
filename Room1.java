@@ -5,9 +5,6 @@ public class Room1 {
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
 
-  public static void main() {
-    room1();
-  }
   public static void room1() {
     System.out.println();
     if (hasExplored) {
@@ -20,7 +17,7 @@ public class Room1 {
       chooseAction();
     }
   }
-}
+
 private static void chooseAction() {
   hasExplored = true;
   System.out.println("What do you do?");
@@ -70,7 +67,7 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    //use room5 method
+    Room5();
   }
   else if (answer.equals('b' + "")) {
     //use room7 method
