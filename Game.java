@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Game {
   public static void main(String[] args) {
+    clearConsole();
     introSequence();
     Room8.room8();
   }
@@ -15,6 +16,7 @@ public class Game {
     if(input.equals("y")) {
       backstory();
     }
+    clearConsole();
   }
 
   private static void backstory() {
@@ -32,7 +34,6 @@ public class Game {
     System.out.println(line);
     System.out.println("Press <enter> to continue...");
     String uselessVariable = myScanner.nextLine();
-    clearConsole();
   }
 
   public static void clearConsole() {
