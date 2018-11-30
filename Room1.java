@@ -5,7 +5,7 @@ public class Room1 {
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
 
-  public static void main(String[] args) {
+  public static void main() {
     room1();
   }
   public static void room1() {
