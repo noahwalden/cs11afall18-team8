@@ -12,8 +12,9 @@ public class GameInput {
     return x;
   }
 
-
-  public static void Choice5(String[] args) {
+  // room 5 choices
+  public static void Choice5() {
+    Scanner myScanner = new Scanner(System.in);
     String input = myScanner.nextLine();
     System.out.println("You see a red button, what to do?");
     System.out.println("To press the button, press p. To leave it alone, press l");
