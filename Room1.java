@@ -66,7 +66,7 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    //use room5 method
+    Room5();
   }
   else if (answer.equals('b' + "")) {
     //use room7 method
