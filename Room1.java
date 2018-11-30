@@ -13,7 +13,7 @@ public class Room1 {
       leaveRoom();
     }
     else{
-      RoomDescriptions.Barracks();
+      RoomDescriptions.barracks();
       chooseAction();
     }
   }
