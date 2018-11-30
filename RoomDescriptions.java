@@ -4,10 +4,10 @@ Room 8 - prison cell
 
 public class RoomDescriptions {
   public static void prisonCell() {
-    String line = "Prison Cell" +
-                  "The cell is dark and covered in alien slime." +
-                  "The cell door, slightly ajar, is located to the east." +
-                  "A keycard is resting on the floor.";
+    String line = "Prison Cell\n" +
+                  "The cell is dark and covered in alien slime.\n" +
+                  "The cell door, slightly ajar, is located to the east.\n" +
+                  "A keycard is resting on the floor.\n";
     System.out.println(line);
   }
   // room 1
