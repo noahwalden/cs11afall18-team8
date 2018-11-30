@@ -20,7 +20,7 @@ public class Room1 {
       chooseAction();
     }
   }
-}
+
 private static void chooseAction() {
   hasExplored = true;
   System.out.println("What do you do?");
