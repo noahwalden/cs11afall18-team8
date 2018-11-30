@@ -14,13 +14,12 @@ public class Room1 {
       System.out.println("You have already explored this room.");
       System.out.println();
       leaveRoom();
+    } else {
+      RoomDescriptions.Barracks();
+      chooseAction();
     }
-    else{
-    RoomDescriptions.Barracks();
-    chooseAction();
-
   }
-}
+  
   private static void chooseAction() {
     hasExplored = true;
 
