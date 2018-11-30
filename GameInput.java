@@ -19,6 +19,7 @@ public class GameInput {
 
   // room 5 action
   public static void Choice5(String[] args) {
+
     System.out.println("You see a red button, what to do?");
     System.out.println("To press the button, press p. To leave it alone, press l");
     String input = myScanner.nextLine();
@@ -34,7 +35,6 @@ public class GameInput {
     String input = myScanner.nextLine();
     switch(input) {
       case "s":
-        System.out.println("You now enter an unknown room");
       case "b":
     }
 
