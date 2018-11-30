@@ -3,8 +3,8 @@ public class GameInput {
   public static String letterInput(String input) {
     Scanner myScanner = new Scanner(System.in);
     System.out.println("> ");
-    String input = myScanner.nextLine().toLowerCase();
-    while ((!input.equals("a")) && (!input.equals("b")) && (!input.equals("c")) && (!input.equals("d"))) {
+    String x = myScanner.nextLine().toLowerCase();
+    while ((!x.equals("a")) && (!x.equals("b")) && (!x.equals("c")) && (!x.equals("d"))) {
       System.out.println("That answer is not valid. Please try again.");
       System.out.println("> ");
       input = myScanner.nextLine().toLowerCase();
@@ -21,7 +21,7 @@ public class GameInput {
       case "p":
         System.out.println("All the cameras are now shut down, well done.");
       case "l":
-        System.out.println("You must now ")
+        System.out.println("You must now ");
     }
 
   }
