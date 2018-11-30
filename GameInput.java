@@ -12,7 +12,7 @@ public class GameInput {
     return x;
   }
 
-  // room 5 choices
+
   public static void Choice5(String[] args) {
     String input = myScanner.nextLine();
     System.out.println("You see a red button, what to do?");
