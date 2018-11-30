@@ -4,6 +4,8 @@ public class Room5 {
 
   public static boolean hasExplored = false;
 
+  private static int lastRoom = 0;
+
   public static void Room5(){
     System.out.println();
     if(hasExplored){
@@ -51,26 +53,30 @@ public class Room5 {
   }
 
   private static void leaveRoom(){
-    Scanner myScanner = new Scanner(System.in);
+    hasExplored = true;
     System.out.println("Which door do you want to leave through?");
     System.out.println("  A) The Southern door");
     System.out.println("  B) Back to the barracks");
+    Scanner myScanner = new Scanner(System.in);
 
-    String thirdDecision = myScanner.nextLine();
-    thirdDecision = thirdDecision.toLowerCase();
-    while ((!thirdDecision.equals('a' + "")) && (!thirdDecision.equals('b' + "")) &&
-    (!thirdDecision.equals('c' + ""))) {
+    String answer = myScanner.nextLine();
+    System.out.println();
+    System.out.println();
+    answer = answer.toLowerCase();
+    while ((!myScanner.equals('a' + "")) && (!answer.equals('b' + "")) &&
+    (!myScanner.equals('c' + ""))) {
       System.out.println("That answer is not valid. Please try again.");
-      thirdDecision = input.nextLine();
       System.out.println();
       System.out.println();
-      answer = thirdDecision.toLowerCase();
     }
-    if (thirdDecision.equals('a' + "")) {
-      //use room1 method
+    if (answer.equals('a' + "")) {
+    Room3.room3(6);
     }
     else if (answer.equals('b' + "")) {
-      //use room4 method
+      Room3.room3(6);
+    }
+    else {
+    //use room4 method
     }
   }
 }
