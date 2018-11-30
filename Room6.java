@@ -6,9 +6,6 @@ public class Room6 {
 
   private static int lastRoom = 0;
 
-  public static void main(String[] args) {
-    room6();
-  }
   public static void room6(int previousRoom) {
     lastRoom = previousRoom;
     System.out.println();
