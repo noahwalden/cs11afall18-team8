@@ -24,7 +24,6 @@ public class Room6 {
   }
 
   private static void firstChoice() {
-    hasExplored = true;
     boolean hasLooked = false;
     String answer = "a";
     while (answer.equals('a' + "")) {
@@ -127,7 +126,7 @@ public class Room6 {
 
   private static void previousRoom() {
     if (lastRoom == 3) {
-      //use room3 method
+      Room3.room3(6);
     }
     else if (lastRoom == 4) {
       //use room4 method
@@ -138,6 +137,7 @@ public class Room6 {
   }
 
   private static void leaveRoom() {
+    hasExplored = true;
     System.out.println("Which door do you want to leave through?");
     System.out.println("  A) The Eastern door");
     System.out.println("  B) The Southern door");
@@ -159,7 +159,7 @@ public class Room6 {
     //use room7 method
     }
     else if (answer.equals('b' + "")) {
-    //use room3 method
+      Room3.room3(6);
     }
     else {
     //use room4 method
