@@ -2,9 +2,9 @@ import java.util.Scanner;
 public class Game {
   public static void main(String[] args) {
     introSequence();
-    prisonCell();
+    Room8.main();
   }
-  private static void introSequence(String[] args) {
+  private static void introSequence() {
     System.out.println("The Boolin' Operators' Text Adventure Game");
     System.out.println("Professor: Timothy Hickey");
     System.out.printf("Created on Nov. 27, 2018%n");
@@ -16,20 +16,18 @@ public class Game {
       backstory();
     }
   }
-  public static void prisonCell(String[] args) {
-    RoomDescriptions.prisonCell();
-    String userInput = GameInput.prisonCell();
-    switch(userInput) {
-      case "e": barracks();
-      default: GameInput.error();
-    }
 
   private static void backstory() {
-    System.out.printf("Superbowl Sunday, 1995. You and your buddies had all%n
-                      gathered at your house to watch the big game. At halftime,%n
-                      you decide to leave the house and swing by the store for%n
-                      more chips and dip. As you walk back from the convenience%n
-                      store to the car, a bright suddenly appears directly above%n
-                      your head, blinding you.");
+    String line = "Superbowl Sunday, 1995. You and your buddies had all" +
+                  "gathered at your house to watch the big game. At halftime," +
+                  "you decide to leave the house and swing by the store for" +
+                  "more chips and dip. As you walk back from the convenience" +
+                  "store to the car, a bright suddenly appears directly above" +
+                  "your head, blinding you. The last thing you remember is being" +
+                  "sucked up into the hull of an enormous disk-shaped alien" +
+                  "craft. Waking up in your cell, you begin to look for ways" +
+                  "to escape.";
+
+    System.out.println(line);
   }
 }
