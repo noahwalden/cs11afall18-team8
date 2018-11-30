@@ -1,20 +1,15 @@
 import java.util.Scanner;
 public class GameInput {
-  public static void main(String[] args) {
+  public static String letterInput(String input) {
     Scanner myScanner = new Scanner(System.in);
     System.out.println("> ");
-    String input = myScanner.nextLine();
-    switch(input) {
-      case "north":
-      case "n":
-      return input; break;
-      case "east":
-      case "e":
-      case "south":
-      case "s":
-      case "west":
-      case "w":
+    String input = myScanner.nextLine().toLowerCase();
+    while ((!input.equals("a")) && (!input.equals("b")) && (!input.equals("c")) && (!input.equals("d"))) {
+      System.out.println("That answer is not valid. Please try again.");
+      System.out.println("> ");
+      input = myScanner.nextLine().toLowerCase();
     }
+    return input;
   }
 
   // room 5 choices
@@ -25,7 +20,7 @@ public class GameInput {
     switch(input) {
       case "p":
         System.out.println("All the cameras are now shut down, well done.");
-      case "l": 
+      case "l":
         System.out.println("You must now ")
     }
 
