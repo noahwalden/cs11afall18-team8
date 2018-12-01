@@ -136,8 +136,6 @@ public class Inventory {
     printInventory();
     boolean empty = checkIfEmpty();
     if (empty) {
-      System.out.println("Your inventory is empty! You'll have to use your fists.");
-      System.out.println();
       return "fist";
     }
     while (true) {

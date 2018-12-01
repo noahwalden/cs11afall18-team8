@@ -90,18 +90,6 @@ public class Room6 {
     }
   }
 
-  // private static void killAlien() {
-  //   String item = Inventory.chooseItem();
-  //   int hits = (int)Math.floor(Math.random()*6.0);
-  //   System.out.println("You hit the alien with your " + item + ".");
-  //   for (int i = 1; i <= hits; i++) {
-  //     System.out.println("He's not dead! You hit him again.");
-  //   }
-  //   System.out.println("The alien is dead.");
-  //   System.out.println();
-  //   leaveRoom();
-  // }
-
   private static void sneakPast() {
     System.out.println("You attempt to sneak past the alien.");
     System.out.println();
@@ -120,6 +108,7 @@ public class Room6 {
   }
 
   private static void fightAlien() {
+    Game.clearConsole();
     System.out.println("The alien wakes up!");
     System.out.println("Quick, hit him with something!");
     System.out.println();

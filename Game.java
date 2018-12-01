@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.IOException;
+
 public class Game {
   public static void main(String[] args) {
     clearConsole();
@@ -37,7 +39,12 @@ public class Game {
     String uselessVariable = myScanner.nextLine();
   }
 
-  public static void clearConsole() {
-    System.out.print("\033[H\033[2J");
+  public static void clearConsole(){
+    try {
+        if (System.getProperty("os.name").contains("Windows"))
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        else
+            Runtime.getRuntime().exec("clear");
+    } catch (IOException | InterruptedException ex) {}
   }
 }
