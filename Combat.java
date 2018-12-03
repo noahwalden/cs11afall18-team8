@@ -72,10 +72,12 @@ public class Combat{
   public static void randomEncounter() {
     double encounterChance = Math.random();
     if (encounterChance>0.66) {
+      System.out.println();
       System.out.println("You run into an alien soldier!");
       System.out.println("Quick, hit him with something!");
-      double alienHP = ThreadLocalRandom.current().nextInt(150, 250);
-      double alienPow = ThreadLocalRandom.current().nextInt(30, 60);
+      System.out.println();
+      int alienHP = ThreadLocalRandom.current().nextInt(150, 250);
+      int alienPow = ThreadLocalRandom.current().nextInt(30, 40);
       Combat.fight(alienHP, alienPow, false);
     }
   }
