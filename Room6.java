@@ -16,10 +16,10 @@ public class Room6 {
       leaveRoom();
     }
     else {
+      System.out.println("Bunks");
       System.out.println("You enter the room and find yourself in what appears to");
       System.out.println("be the sleeping quarters of the ship.");
       System.out.println("An alien sleeps in one of the beds across the room.");
-      System.out.println();
       firstChoice();
     }
   }
