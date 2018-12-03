@@ -26,6 +26,7 @@ private static void chooseAction() {
   System.out.println("  C) Admire the view");
 
   String answer = GameInput.letterInput();
+  System.out.println();
   switch(answer) {
     case "a": stay(); break;
     case "b": leaveRoom(); break; //Call to Room1 class file
@@ -40,17 +41,14 @@ private static void stay() {
 
 private static void view() {
   System.out.println("Wow what a a view but you should probably get going");
-  System.out.println();
   chooseAction();
 }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
-  System.out.println("  A) The Eastern door");
+  System.out.println("  A) The eastern door");
   System.out.println("  B) Stay where you are");
   Scanner input = new Scanner(System.in);
   String answer = input.nextLine();
-  System.out.println();
-  System.out.println();
   answer = answer.toLowerCase();
   while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) ) {
     System.out.println("That answer is not valid. Please try again.");
@@ -63,7 +61,7 @@ private static void leaveRoom() {
     Room6.room6();
   }
   else if (answer.equals('b' + "")) {
-
+    
   }
 }
 
