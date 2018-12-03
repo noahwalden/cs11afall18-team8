@@ -65,7 +65,7 @@ public class Combat{
 
   public static void randomEncounter() {
     double encounterChance = Math.random();
-    if (encounterChance>0.5) {
+    if (encounterChance>0.66) {
       System.out.println("You run into an alien soldier!");
       System.out.println("Quick, hit him with something!");
       double alienHP = ThreadLocalRandom.current().nextInt(150, 250);
