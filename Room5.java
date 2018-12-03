@@ -11,7 +11,7 @@ public class Room5 {
       System.out.println();
       leaveRoom();
     }else{
-      Room5.action();
+      action();
     }
   }
 

@@ -51,6 +51,7 @@ private static void getbanana() {
     System.out.println("You pick up the banana");
     System.out.println();
     Inventory.addToInventory("banana");
+    Inventory.printInventory();
   }
   else {
     System.out.println("You already have that banana");
