@@ -12,7 +12,7 @@ public class RoomDescriptions {
   public static void barracks() {
     System.out.println("Barracks");
     System.out.println("The barracks have many futuristic weapons. You decide to go with a pipe");
-    System.out.println("There is a a door straight to the south of you and two doors that are to the east and west of you");
+    System.out.println("There are doors to the east and west of you");
   }
   //room 5
   public static void surveillanceRoom() {

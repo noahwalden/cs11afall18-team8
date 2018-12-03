@@ -28,7 +28,7 @@ public class Room5 {
 
   private static void roomDescription(){
     System.out.println();
-    System.out.println("SURVEILLANCE ROOM:");
+    System.out.println("Surveillance room:");
     System.out.println();
     System.out.println("You enter a room filled with 8 screens showing different parts of the ship.");
     System.out.println("You notice alien symbols which you can't comprehend.");
