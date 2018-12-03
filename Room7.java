@@ -1,11 +1,9 @@
 import java.util.Scanner;
 
 public class Room7 {
-  public static boolean hasLooked = false;
-  public static boolean hasExplored = false;
-  public static boolean cardPickup = false;
 
-  public static void room1() {
+
+  public static void room7() {
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
@@ -67,10 +65,10 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room6room6(7);
+    Room5.Action();
   }
   else if (answer.equals('b' + "")) {
-    Room1.room1(7);
+    //use room7 method
   }
 }
 private static void goback() {
