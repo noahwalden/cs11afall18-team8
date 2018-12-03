@@ -55,8 +55,8 @@ public class Room4 {
     String secondDecision = myScanner.nextLine();
     switch(secondDecision) {
       case "s": Room4.room4(); break;
-      case "q": Room6.room6(); break;
-      case "b": Room6.room6(); break; //create room 2 class
+      case "q": Room6.room6(4); break;
+      case "b": Room6.room6(4); break; //create room 2 class
     }
   }
 }
