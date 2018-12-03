@@ -6,7 +6,7 @@ public class RoomDescriptions {
   public static void prisonCell() {
     System.out.println("Prison Cell");
     System.out.println("The cell is dark and covered in alien slime.");
-    System.out.println("The cell door, slightly ajar, is located to the east.");
+    System.out.println("The cell door is located to the east.");
   }
   // room 1
   public static void barracks() {
