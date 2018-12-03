@@ -5,7 +5,6 @@ public class Room3 {
   public static boolean hasExplored = false;
 
   public static void room3() {
-    lastRoom = previousRoom;
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
