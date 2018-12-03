@@ -24,14 +24,14 @@ public class Game {
 
   private static void backstory() {
     Scanner myScanner = new Scanner(System.in);
-    String line = "Superbowl Sunday, 1995. You and your buddies had all\n" +
+    String line = "Superbowl Sunday, 1995. You and your buddies have all\n" +
                   "gathered at your house to watch the big game. At halftime,\n" +
                   "you decide to leave the house and swing by the store for\n" +
                   "more chips and dip. As you walk back from the convenience\n" +
                   "store to the car, a bright light suddenly appears directly above\n" +
                   "your head, blinding you. The last thing you remember is being\n" +
-                  "sucked up into the hull of an enormous disk-shaped alien\n" +
-                  "craft. Waking up in your cell, you begin to look for ways\n" +
+                  "sucked up into the hull of an enormous disk-shaped alien craft.\n" +
+                  "Waking up in your cell, you begin to look for ways\n" +
                   "to escape.\n";
 
     System.out.println(line);
