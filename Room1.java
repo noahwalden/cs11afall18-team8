@@ -41,15 +41,20 @@ private static void lookAround() {
   } else {
     System.out.println("There's nothing else to see here.");
     System.out.println();
-
+    chooseAction();
   }
 }
 
 private static void getbanana() {
+  if (getbanana == false) {
+    getbanana = true;
   System.out.println("You pick up the banana");
   System.out.println();
   Inventory.addToInventory("banana");
-
+else{
+  System.out.println("You already have that banana");
+}
+  chooseAction();
 }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
