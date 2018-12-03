@@ -61,8 +61,8 @@ public class Room5 {
     String secondDecision = myScanner.nextLine();
     secondDecision = secondDecision.toLowerCase();
     switch(secondDecision) {
-      case "a": Room4.room4(); break;
-      case "b": Room1.room1(); break;
+      case "a": Combat.randomEncounter(); Room4.room4(); break;
+      case "b": Combat.randomEncounter(); Room1.room1(); break;
       default: System.out.println("Invalid answer. Please input one of the two letters");
     }
   }

@@ -128,6 +128,7 @@ public class Room6 {
       System.out.println();
       answer = answer.toLowerCase();
     }
+    Combat.randomEncounter();
     if (answer.equals('a' + "")) {
       Room7.room7();
     }
