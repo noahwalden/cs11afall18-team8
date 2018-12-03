@@ -39,6 +39,16 @@ public class Combat{
     }
   }
 
+  public static void finalBoss(int hp, int pow){
+    Game.clearConsole();
+    Scanner myScanner = new Scanner(System.in);
+    String item = Inventory.chooseItem();
+    ItemStats.stats(item);
+    System.out.println(ItemStats.description);
+    System.out.println("You hit the alien with your " + item + "!");
+    int totalDamage = power + ItemStats.power;
+  }
+
   private static void alienFight(int alienPow){
     Scanner myScanner = new Scanner(System.in);
     System.out.println("The alien swings in retaliation!");

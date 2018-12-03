@@ -21,9 +21,9 @@ public class RoomDescriptions {
     System.out.println("You notice alien symbols which you can comprehend.");
   }
 
-public static void room7() {
-  System.out.println("Cargo Bay:");
-  System.out.println("You enter a room filled with huge ships with weird symbols on them");
-  System.out.println("You see a ship arrive in the bay what do you do");
-}
+  public static void room7() {
+    System.out.println("Cargo Bay:");
+    System.out.println("You enter a room filled with huge ships with weird symbols on them");
+    System.out.println("You see a ship arrive in the bay what do you do");
+  }
 }
