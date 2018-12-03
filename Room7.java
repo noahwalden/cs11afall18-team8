@@ -63,7 +63,7 @@ private static void leaveRoom() {
     Room6.room6();
   }
   else if (answer.equals('b' + "")) {
-
+    chooseAction();
   }
 }
 
