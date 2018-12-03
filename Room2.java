@@ -47,6 +47,7 @@ public class Room2 {
         System.out.println();
         answer = answer.toLowerCase();
       }
+
       if (answer.equals('a' + "")) {
         if (!hasYelled) {
           yell();
