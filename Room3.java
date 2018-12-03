@@ -4,7 +4,7 @@ public class Room3 {
 
   public static boolean hasExplored = false;
 
-  public static void room3(int previousRoom) {
+  public static void room3() {
     lastRoom = previousRoom;
     System.out.println();
     if (hasExplored) {
