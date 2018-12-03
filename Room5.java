@@ -7,7 +7,7 @@ public class Room5 {
   public static void Room5(){
     System.out.println();
     if(hasPressedButton){
-        System.out.println("There is nothing more to do in this room.");
+      System.out.println("There is nothing more to do in this room.");
       System.out.println();
       leaveRoom();
     }else{
@@ -24,7 +24,6 @@ public class Room5 {
       case "l": doNothing(); break;
     }
     leaveRoom();
-    }
   }
 
   private static void roomDescription(){
@@ -51,6 +50,7 @@ public class Room5 {
     System.out.println();
     System.out.println("You watch the screen and notice guards may be coming your way, it's time to go.");
   }
+
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
     System.out.println();
@@ -59,7 +59,8 @@ public class Room5 {
     System.out.println();
     String secondDecision = myScanner.nextLine();
     switch(secondDecision) {
-      case "s": Room4.room4();
-      case "b": Room1.room1();
+      case "s": Room4.room4(); break;
+      case "b": Room1.room1(); break;
+    }
   }
 }
