@@ -9,7 +9,6 @@ public class Room6 {
   private static int lastRoom = 0;
 
   public static void room6() {
-    lastRoom = previousRoom;
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
