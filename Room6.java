@@ -118,13 +118,13 @@ public class Room6 {
 
   private static void previousRoom() {
     if (lastRoom == 3) {
-      Room3.room3(6);
+      Room3.room3();
     }
     else if (lastRoom == 4) {
       //use room4 method
     }
     else {
-      Room7.room7(6);
+      Room7.room7();
     }
   }
 
