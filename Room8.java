@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Room8 {
-  public static boolean hasLooked = false;  
+  public static boolean hasLooked = false;
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
   public static boolean help = false;
