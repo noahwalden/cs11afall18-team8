@@ -9,7 +9,6 @@ public class Room7 {
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
-      System.out.println();
       leaveRoom();
     }
     else{
@@ -49,6 +48,7 @@ private static void leaveRoom() {
   System.out.println("  B) Stay where you are");
   Scanner input = new Scanner(System.in);
   String answer = input.nextLine();
+  System.out.println();
   answer = answer.toLowerCase();
   while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) ) {
     System.out.println("That answer is not valid. Please try again.");
