@@ -54,9 +54,9 @@ public class Room4 {
     System.out.println("To enter the bridge, press b.");
     String secondDecision = myScanner.nextLine();
     switch(secondDecision) {
-      case "s": Room6.room6(); break;
+      case "s": Room5.room5(); break;
       case "q": Room6.room6(); break;
-      case "b": Room6.room6(); break; //create room 2 class
+      case "b": Room1.room1(); break; //create room 2 class
     }
   }
 }
