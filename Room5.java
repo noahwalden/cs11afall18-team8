@@ -37,7 +37,6 @@ public class Room5 {
     System.out.println("You see a red button, what to do?");
     System.out.println("A. Press the button.");
     System.out.println("B. Leave it alone.");
-    System.out.println();
   }
   private static void pressButton(){
     hasPressedButton = true;
