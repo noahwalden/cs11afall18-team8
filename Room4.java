@@ -27,13 +27,13 @@ public class Room4 {
 
   private static void roomDescription(){
     System.out.println();
-    System.out.println("Ship's weapon system:");
+    System.out.println("CANNONS:");
     System.out.println();
     System.out.println("You enter to find a huge blaster cannon");
     System.out.println("Inside the cannon you see a sign pointing at a unknown target.");
     System.out.println("Do you:");
-    System.out.println(" A. Try to use the gun.");
-    System.out.println(" B. Leave it be and move on.");
+    System.out.println("  A. Try to use the gun.");
+    System.out.println("  B. Leave it be and move on.");
     System.out.println("Press a to use the gun, or b to leave it alone");
   }
 
@@ -49,14 +49,30 @@ public class Room4 {
 
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
-    System.out.println("To make your way back to the surveillance room, press s.");
-    System.out.println("To enter the sleeping quarters, press q.");
-    System.out.println("To enter the bridge, press b.");
+    System.out.println("What do you do?");
+    System.out.println("  A) Make your way back to the surveillance room");
+    System.out.println("  B) Enter the sleeping quarters");
+    System.out.println("  C) Enter the bridge");
     String secondDecision = myScanner.nextLine();
+    secondDecision = secondDecision.toLowerCase();
+    while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
+    (!answer.equals('c' + ""))) {
+      System.out.println("That answer is not valid. Please try again.");
+      answer = input.nextLine();
+      System.out.println();
+      System.out.println();
+      answer = answer.toLowerCase();
+    }
     switch(secondDecision) {
-      case "s": Room4.room4(); break;
-      case "q": Room6.room6(4); break;
-      case "b": Room6.room6(4); break; //create room 2 class
+      case "a":
+        Room4.room4();
+        break;
+      case "b":
+        Room6.room6(4);
+        break;
+      case "c":
+        Room6.room6(4);
+        break; //create room 2 class
     }
   }
 }
