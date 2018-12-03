@@ -14,7 +14,7 @@ public class Combat{
     System.out.println(ItemStats.description);
     System.out.println("You hit the alien with your " + item + "!");
     int totalDamage = power + ItemStats.power;
-    if(item == "bananna"){
+    if(item == "banana"){
         totalDamage = 0;
         System.out.println("It does nothing... The alien starts laughing at you.");
     }

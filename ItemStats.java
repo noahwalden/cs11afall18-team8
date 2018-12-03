@@ -8,7 +8,7 @@ public class ItemStats{
         description = "You equip the pipe, feeling a surge of power! Your attack is increased!";
         power = 30;
         break;
-      case "bananna":
+      case "banana":
         description = "You pull the bananna out of your pocket and take aim at the alien! The alien looks confused.";
         power = 999;
         break;
