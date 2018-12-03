@@ -60,15 +60,14 @@ private static void getbanana() {
   }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
-  System.out.println("  A) The Western door");
-  System.out.println("  B) The Eastern door");
+  System.out.println("  A) The The Eastern Door");
+  System.out.println("  B) The Western Door");
   Scanner input = new Scanner(System.in);
   String answer = input.nextLine();
   System.out.println();
   System.out.println();
   answer = answer.toLowerCase();
-  while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
-  (!answer.equals('c' + ""))) {
+  while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) ) {
     System.out.println("That answer is not valid. Please try again.");
     answer = input.nextLine();
     System.out.println();
@@ -79,7 +78,7 @@ private static void leaveRoom() {
     Room5.room5();
   }
   else if (answer.equals('a' + "")) {
-    //use room7 method
+    Room7.room7();
   }
 }
 private static void goback() {
