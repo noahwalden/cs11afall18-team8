@@ -36,6 +36,7 @@ public class Combat{
     defense = defense + hp/5;
     System.out.println("HP Remaining: "+ health);
     System.out.println("Current Defense: "+ defense);
+    System.out.println();
     }
   }
 
