@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Combat{
   public static int health = 100;
@@ -61,4 +62,16 @@ public class Combat{
     System.out.println("Press <enter> to continue...");
     String uselessVariable = myScanner.nextLine();
   }
+
+  public static void randomEncounter() {
+    double encounterChance = Math.random();
+    if (encounterChance>0.5) {
+      System.out.println("You run into an alien soldier!");
+      System.out.println("Quick, hit him with something!");
+      double alienHP = ThreadLocalRandom.current().nextInt(150, 250);
+      double alienPow = ThreadLocalRandom.current().nextInt(30, 60);
+      Combat.fight(alienHP, alienPow, false);
+    }
+  }
+
 }
