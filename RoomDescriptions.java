@@ -11,7 +11,7 @@ public class RoomDescriptions {
   // room 1
   public static void barracks() {
     System.out.println("Barracks");
-    System.out.println("The barracks have many futuristic weapons. You decide to go with a pipe");
+    System.out.println("The barracks have many futuristic weapons.");
     System.out.println("There are doors to the east and west of you");
   }
   //room 5
