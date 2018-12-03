@@ -41,6 +41,7 @@ private static void lookAround() {
   } else {
     System.out.println("There's nothing else to see here.");
     System.out.println();
+
   }
 }
 
@@ -48,6 +49,7 @@ private static void getbanana() {
   System.out.println("You pick up the banana");
   System.out.println();
   Inventory.addToInventory("banana");
+
 }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
