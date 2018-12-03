@@ -27,7 +27,7 @@ public class Room4 {
 
   private static void roomDescription(){
     System.out.println();
-    System.out.println("CANNONS:");
+    System.out.println("Ship's weapon system:");
     System.out.println();
     System.out.println("You enter to find a huge blaster cannon");
     System.out.println("Inside the cannon you see a sign pointing at a unknown target.");
