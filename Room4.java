@@ -51,7 +51,6 @@ public class Room4 {
     Scanner myScanner = new Scanner(System.in);
     System.out.println("To make your way back to the surveillance room, press s.");
     System.out.println("To enter the sleeping quarters, press q.");
-    System.out.println("To enter the bridge, press b.");
     String secondDecision = myScanner.nextLine();
     switch(secondDecision) {
       case "s": Room5.room5(); break;
