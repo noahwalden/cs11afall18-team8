@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Room1 {
   public static boolean hasLooked = false;
   public static boolean hasExplored = false;
-  public static boolean cardPickup = false;
+  public static boolean getbanana = false;
 
   public static void room1() {
     System.out.println();
@@ -74,7 +74,7 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room5.action();
+    Room5.Action();
   }
   else if (answer.equals('b' + "")) {
     //use room7 method
