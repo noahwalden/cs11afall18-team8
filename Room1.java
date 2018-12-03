@@ -51,6 +51,7 @@ private static void getbanana() {
     System.out.println("You pick up the banana");
     System.out.println();
     Inventory.addToInventory("banana");
+    Inventory.printInventory();
   }
   else {
     System.out.println("You already have that banana");
@@ -76,7 +77,7 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room5.Action();
+    Room5.action();
   }
   else if (answer.equals('b' + "")) {
     //use room7 method
