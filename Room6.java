@@ -12,7 +12,6 @@ public class Room6 {
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
-      System.out.println();
       leaveRoom();
     }
     else {
@@ -35,7 +34,6 @@ public class Room6 {
       Scanner response = new Scanner(System.in);
       answer = response.nextLine();
       System.out.println();
-      System.out.println();
       answer = answer.toLowerCase();
       while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
       (!answer.equals('c' + ""))) {
@@ -52,7 +50,6 @@ public class Room6 {
         }
         else {
           System.out.println("There's nothing else to see here.");
-          System.out.println();
         }
       }
       else if (answer.equals('b' + "")) {
@@ -114,9 +111,9 @@ public class Room6 {
   private static void leaveRoom() {
     hasExplored = true;
     System.out.println("Which door do you want to leave through?");
-    System.out.println("  A) The Eastern door");
-    System.out.println("  B) The Southern door");
-    System.out.println("  C) The Western door");
+    System.out.println("  A) The eastern door");
+    System.out.println("  B) The southern door");
+    System.out.println("  C) The western door");
     Scanner input = new Scanner(System.in);
     String answer = input.nextLine();
     System.out.println();
