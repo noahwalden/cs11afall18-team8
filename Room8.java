@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Room8 {
-  public static boolean hasLooked = false;  
+  public static boolean hasLooked = false;
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
   public static boolean help = false;
@@ -18,7 +18,6 @@ public class Room8 {
   }
 
   private static void chooseAction() {
-    String answer;
     hasExplored = true;
       System.out.println("What do you do?");
       System.out.println("  A) Look around for more details.");
@@ -27,7 +26,7 @@ public class Room8 {
       if (!cardPickup) {
         System.out.println("  D) Pick up the keycard.");
       }
-      answer = GameInput.letterInput();
+      String answer = GameInput.letterInput();
 
       switch(answer) {
         case "a": lookAround(); break;
@@ -64,6 +63,7 @@ public class Room8 {
 
   private static void callHelp() {
     if (!help) {
+      help = true;
       String line = "You call out for help, but you receive no response other\n" +
                     "than your own voice echoing back at you.\n";
       System.out.println(line);
