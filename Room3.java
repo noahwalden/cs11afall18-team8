@@ -4,10 +4,7 @@ public class Room3 {
 
   public static boolean hasExplored = false;
 
-  private static int lastRoom = 0;
-
-  public static void room3(int previousRoom) {
-    lastRoom = previousRoom;
+  public static void room3() {
     System.out.println();
     if (hasExplored) {
       System.out.println("You have already explored this room.");
@@ -30,14 +27,13 @@ public class Room3 {
       System.out.println("  A) Look around for more details.");
       System.out.println("  B) Sit down to eat with the alien.");
       System.out.println("  C) Raid the kitchen for yams.");
-      System.out.println("  D) Leave the way you came.");
       Scanner response = new Scanner(System.in);
       answer = response.nextLine();
       System.out.println();
       System.out.println();
       answer = answer.toLowerCase();
       while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
-      (!answer.equals('c' + "")) && (!answer.equals('d' + ""))) {
+      (!answer.equals('c' + ""))) {
         System.out.println("That answer is not valid. Please try again.");
         answer = response.nextLine();
         System.out.println();
@@ -57,11 +53,8 @@ public class Room3 {
       else if (answer.equals('b' + "")) {
         sitDown();
       }
-      else if (answer.equals('c' + "")) {
-        getYams();
-      }
       else {
-        previousRoom();
+        getYams();
       }
     }
   }
@@ -103,15 +96,6 @@ public class Room3 {
     leaveRoom();
   }
 
-  private static void previousRoom() {
-    if (lastRoom == 6) {
-      Room6.room6(3);
-    }
-    else {
-      //use room2 method
-    }
-  }
-
   private static void leaveRoom() {
     hasExplored = true;
     System.out.println("Which door do you want to leave through?");
@@ -130,7 +114,7 @@ public class Room3 {
       answer = answer.toLowerCase();
     }
     if (answer.equals('a' + "")) {
-      Room6.room6(3);
+      Room6.room6();
     }
     else {
       //use room4 method
