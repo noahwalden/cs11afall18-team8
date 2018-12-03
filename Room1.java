@@ -25,6 +25,7 @@ private static void chooseAction() {
   System.out.println("  C) Pick up the banana.");
   System.out.println("  D) Go Back to your cell");
   String answer = GameInput.letterInput();
+  System.out.println();
   switch(answer) {
     case "a": lookAround(); break;
     case "b": leaveRoom(); break; //Call to Room1 class file
@@ -36,7 +37,8 @@ private static void chooseAction() {
 private static void lookAround() {
   if (!hasLooked) {
     hasLooked = true;
-    System.out.println("The barracks have many futuristic weapons these weapons include plasma torpedos, bananas, and pipes");
+    System.out.println("The barracks have many futuristic weapons these weapons include plasma torpedos, bananas, and pipes.");
+    chooseAction();
   } else {
     System.out.println("There's nothing else to see here.");
     System.out.println();
