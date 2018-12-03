@@ -11,8 +11,7 @@ public class Room1 {
       System.out.println("You have already explored this room.");
       System.out.println();
       leaveRoom();
-    }
-    else{
+    } else {
       RoomDescriptions.barracks();
       chooseAction();
     }
@@ -60,8 +59,8 @@ private static void getbanana() {
   }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
-  System.out.println("  A) The Eastern door");
-  System.out.println("  B) The Western door");
+  System.out.println("  A) The Western door");
+  System.out.println("  B) The Eastern door");
   Scanner input = new Scanner(System.in);
   String answer = input.nextLine();
   System.out.println();
@@ -76,10 +75,10 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room5.room5();
+    Room7.room7();
   }
   else if (answer.equals('b' + "")) {
-    //use room7 method
+    Room5.room5();
   }
 }
 private static void goback() {
