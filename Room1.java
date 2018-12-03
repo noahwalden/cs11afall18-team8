@@ -76,10 +76,10 @@ private static void leaveRoom() {
     System.out.println();
     answer = answer.toLowerCase();
   }
-  if (answer.equals('a' + "")) {
+  if (answer.equals('b' + "")) {
     Room5.room5();
   }
-  else if (answer.equals('b' + "")) {
+  else if (answer.equals('a' + "")) {
     //use room7 method
   }
 }
