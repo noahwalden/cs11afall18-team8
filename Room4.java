@@ -18,9 +18,11 @@ public class Room4 {
     Scanner myScanner = new Scanner(System.in);
     roomDescription();
     String firstDecision = myScanner.nextLine();
+    firstDecision = firstDecision.toLowerCase();
     switch(firstDecision) {
       case "a": pressButton(); break;
       case "b": doNothing(); break;
+      default: System.out.println("Invalid answer. Please input one of the two letters.");
     }
     leaveRoom();
   }
@@ -34,7 +36,6 @@ public class Room4 {
     System.out.println("Do you:");
     System.out.println(" A. Try to use the gun.");
     System.out.println(" B. Leave it be and move on.");
-    System.out.println("Press a to use the gun, or b to leave it alone");
   }
 
   private static void pressButton(){
@@ -49,14 +50,15 @@ public class Room4 {
 
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
-    System.out.println("To make your way back to the surveillance room, press s.");
-    System.out.println("To enter the sleeping quarters, press q.");
-    System.out.println("To enter the bridge, press b.");
+    System.out.println("Do you:");
+    System.out.println(" A. Make your way back to the surveillance room, press s.");
+    System.out.println(" B. Enter the sleeping quarters.");
     String secondDecision = myScanner.nextLine();
+    secondDecision = secondDecision.toLowerCase();
     switch(secondDecision) {
-      case "s": Room5.room5(); break;
-      case "q": Room6.room6(); break;
-      case "b": Room1.room1(); break; //create room 2 class
+      case "a": Room5.room5(); break;
+      case "b": Room6.room6(); break;
+      default: System.out.println("Invalid answer. Please input one of the two letters.");
     }
   }
 }

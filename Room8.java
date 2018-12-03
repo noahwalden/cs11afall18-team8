@@ -30,6 +30,7 @@ public class Room8 {
         System.out.println("  D) Pick up the keycard.");
       }
       String answer = GameInput.letterInput();
+      System.out.println();
 
       switch(answer) {
         case "a": lookAround(); break;
@@ -52,10 +53,9 @@ public class Room8 {
     if (!hasLooked) {
       hasLooked = true;
       System.out.println("The cell is dimly lit. Through a small circular window,");
-      System.out.println("you're able to see the vast expanse of space.\n");
+      System.out.println("you're able to see the vast expanse of space.");
     } else {
       System.out.println("There's nothing else to see here.");
-      System.out.println();
     }
     chooseAction();
   }
@@ -66,6 +66,7 @@ public class Room8 {
       System.out.println("You pick up the keycard.");
       System.out.println();
       Inventory.addToInventory("keycard");
+      Inventory.printInventory();
     } else {
       System.out.println("You already have the keycard.");
     }
@@ -76,11 +77,10 @@ public class Room8 {
     if (!help) {
       help = true;
       String line = "You call out for help, but you receive no response other\n" +
-                    "than your own voice echoing back at you.\n";
+                    "than your own voice echoing back at you.";
       System.out.println(line);
     } else {
       System.out.println("It's clear that no one is coming to help you.");
-      System.out.println();
     }
     chooseAction();
   }

@@ -13,7 +13,7 @@ public class Game {
     System.out.printf("Created on Nov. 27, 2018%n");
 
     Scanner ms = new Scanner(System.in);
-    System.out.println("Show intro sequence? (y/n): ");
+    System.out.print("Show intro sequence? (y/n): ");
     String input = ms.nextLine();
     System.out.println();
     if(input.equals("y")) {
