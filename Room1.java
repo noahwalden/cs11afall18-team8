@@ -3,7 +3,7 @@
 public class Room1 {
   public static boolean hasLooked = false;
   public static boolean hasExplored = false;
-  public static boolean cardPickup = false;
+  public static boolean getbanana = false;
 
   public static void room1() {
     System.out.println();
@@ -48,14 +48,16 @@ private static void lookAround() {
 private static void getbanana() {
   if (getbanana == false) {
     getbanana = true;
-  System.out.println("You pick up the banana");
-  System.out.println();
-  Inventory.addToInventory("banana");
-else{
-  System.out.println("You already have that banana");
-}
+    System.out.println("You pick up the banana");
+    System.out.println();
+    Inventory.addToInventory("banana");
+  }
+  else {
+    System.out.println("You already have that banana");
+  }
+
   chooseAction();
-}
+  }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
   System.out.println("  A) The Eastern door");
@@ -74,7 +76,7 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room5.action();
+    Room5.Action();
   }
   else if (answer.equals('b' + "")) {
     //use room7 method
