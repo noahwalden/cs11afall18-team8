@@ -1,9 +1,9 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class Room1 {
   public static boolean hasLooked = false;
   public static boolean hasExplored = false;
-  public static boolean cardPickup = false;
+  public static boolean getbanana = false;
 
   public static void room1() {
     System.out.println();
