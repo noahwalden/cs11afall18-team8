@@ -43,7 +43,6 @@ public class Room5 {
     System.out.println();
     System.out.println("Well done. All the cameras are now shut down.");
     System.out.println("You hear footsteps, it's time to go.");
-    break;
   }
 
   private static void doNothing(){
