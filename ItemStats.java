@@ -4,7 +4,7 @@ public class ItemStats{
 
   public static void stats(String item){
     switch(item){
-      case "pipe":
+      case "lead pipe":
         description = "You equip the pipe, feeling a surge of power! Your attack is increased!";
         power = 30;
         break;

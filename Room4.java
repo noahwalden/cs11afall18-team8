@@ -29,13 +29,12 @@ public class Room4 {
 
   private static void roomDescription(){
     System.out.println();
-    System.out.println("Ship's weapon system:");
-    System.out.println();
-    System.out.println("You enter to find a huge blaster cannon");
+    System.out.println("Ship's Weapon System");
+    System.out.println("You enter to find a huge blaster cannon.");
     System.out.println("Inside the cannon you see a sign pointing at a unknown target.");
     System.out.println("Do you:");
-    System.out.println(" A. Try to use the gun.");
-    System.out.println(" B. Leave it be and move on.");
+    System.out.println(" A) Try to use the gun.");
+    System.out.println(" B) Leave it be and move on.");
   }
 
   private static void pressButton(){
@@ -51,8 +50,8 @@ public class Room4 {
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
     System.out.println("Do you:");
-    System.out.println(" A. Make your way back to the surveillance room.");
-    System.out.println(" B. Enter the sleeping quarters.");
+    System.out.println(" A) Make your way back to the surveillance room.");
+    System.out.println(" B) Enter the sleeping quarters.");
     String secondDecision = myScanner.nextLine();
     secondDecision = secondDecision.toLowerCase();
     switch(secondDecision) {

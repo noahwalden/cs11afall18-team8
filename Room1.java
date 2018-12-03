@@ -22,8 +22,10 @@ private static void chooseAction() {
   System.out.println("What do you do?");
   System.out.println("  A) Look around");
   System.out.println("  B) Leave room");
-  System.out.println("  C) Pick up the banana.");
-  System.out.println("  D) Go Back to your cell");
+  if (!getbanana) {
+    System.out.println("  C) Pick up the banana");
+  }
+  System.out.println("  D) Go back to your cell");
   String answer = GameInput.letterInput();
   System.out.println();
   switch(answer) {
@@ -37,11 +39,11 @@ private static void chooseAction() {
 private static void lookAround() {
   if (!hasLooked) {
     hasLooked = true;
-    System.out.println("The barracks have many futuristic weapons these weapons include plasma torpedos, bananas, and pipes.");
+    System.out.println("The barracks have many futuristic weapons.");
+    System.out.println("These weapons include plasma torpedos, bananas, and pipes.");
     chooseAction();
   } else {
     System.out.println("There's nothing else to see here.");
-    System.out.println();
     chooseAction();
   }
 }
@@ -62,12 +64,10 @@ private static void getbanana() {
   }
 private static void leaveRoom() {
   System.out.println("Which door do you want to leave through?");
-  System.out.println("  A) The The Eastern Door");
-  System.out.println("  B) The Western Door");
+  System.out.println("  A) The eastern door");
+  System.out.println("  B) The western door");
   Scanner input = new Scanner(System.in);
   String answer = input.nextLine();
-  System.out.println();
-  System.out.println();
   answer = answer.toLowerCase();
   while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) ) {
     System.out.println("That answer is not valid. Please try again.");

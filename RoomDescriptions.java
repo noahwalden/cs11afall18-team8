@@ -11,19 +11,19 @@ public class RoomDescriptions {
   // room 1
   public static void barracks() {
     System.out.println("Barracks");
-    System.out.println("The barracks have many futuristic weapons.");
-    System.out.println("There are doors to the east and west of you");
+    System.out.println("The barracks have many futuristic weapons and one banana.");
+    System.out.println("There are doors to the east and west of you.");
   }
   //room 5
   public static void surveillanceRoom() {
-    System.out.println("Surveillance room:");
+    System.out.println("Surveillance Room");
     System.out.println("You enter a room filled with screens of what seems to be the ship.");
     System.out.println("You notice alien symbols which you can comprehend.");
   }
 
   public static void room7() {
-    System.out.println("Cargo Bay:");
-    System.out.println("You enter a room filled with huge ships with weird symbols on them");
-    System.out.println("You see a ship arrive in the bay what do you do");
+    System.out.println("Cargo Bay");
+    System.out.println("You enter a room filled with huge ships with weird symbols on them.");
+    System.out.println("You see a ship arrive in the bay.");
   }
 }
