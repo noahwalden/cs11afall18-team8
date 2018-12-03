@@ -67,10 +67,10 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room5.Action();
+    Room6room6(7);
   }
   else if (answer.equals('b' + "")) {
-    //use room7 method
+    Room1.room1(7);
   }
 }
 private static void goback() {
