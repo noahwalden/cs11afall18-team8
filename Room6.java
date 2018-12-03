@@ -5,6 +5,7 @@ public class Room6 {
   public static boolean hasExplored = false;
   private static int alienHP = 100;
   private static int alienPow = 30;
+  private static boolean isFinalBoss = false;
 
   private static int lastRoom = 0;
 
@@ -104,7 +105,7 @@ public class Room6 {
     System.out.println("The alien wakes up!");
     System.out.println("Quick, hit him with something!");
     System.out.println();
-    Combat.fight(alienHP, alienPow);
+    Combat.fight(alienHP, alienPow, isFinalBoss);
     leaveRoom();
   }
 

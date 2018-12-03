@@ -5,6 +5,7 @@ public class Room2 {
   public static boolean hasExplored = false;
   private static boolean hasEncountered = false;
   private static boolean hasYelled = false;
+  private static boolean isFinalBoss = false;
   private static int alienHP = 500;
   private static int alienPow = 50;
   private static Scanner myScanner = new Scanner(System.in);
@@ -66,7 +67,7 @@ public class Room2 {
           System.out.println("You return to the fight! Hopefully with a better plan this time...");
           System.out.print("Press <enter> to continue...");
           String uselessVariable = myScanner.nextLine();
-          Combat.finalBoss(alienHP, alienPow);
+          Combat.fight(alienHP, alienPow, isFinalBoss);
         }
       }
     }
@@ -87,7 +88,9 @@ public class Room2 {
     System.out.println();
     System.out.print("Press <enter> to continue...");
     String uselessVariable = myScanner.nextLine();
-    Combat.finalBoss(alienHP, alienPow);
+    Game.clearConsole();
+    Combat.fight(alienHP, alienPow, isFinalBoss);
+    Game.clearConsole();
     endSequence();
   }
 
