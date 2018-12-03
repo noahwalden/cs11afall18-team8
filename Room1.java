@@ -39,8 +39,8 @@ private static void chooseAction() {
 private static void lookAround() {
   if (!hasLooked) {
     hasLooked = true;
-    System.out.println("The barracks have many futuristic weapons.");
-    System.out.println("These weapons include plasma torpedos, bananas, and pipes.");
+    System.out.println("The room is very futuristic");
+    System.out.println("Most of the machines you cannot even comprehend");
     chooseAction();
   } else {
     System.out.println("There's nothing else to see here.");
