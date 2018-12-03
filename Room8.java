@@ -1,11 +1,9 @@
 import java.util.Scanner;
 
 public class Room8 {
+  public static boolean hasLooked = false;
   public static boolean hasExplored = false;
-  public static boolean a = false;
-  public static boolean b = false;
-  public static boolean c = false;
-  public static boolean d = false;
+  public static boolean cardPickup = false;
 
   public static void room8() {
     System.out.println();
