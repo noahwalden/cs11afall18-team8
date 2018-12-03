@@ -55,11 +55,8 @@ public class Room3 {
       else if (answer.equals('b' + "")) {
         sitDown();
       }
-      else if (answer.equals('c' + "")) {
-        getYams();
-      }
       else {
-        previousRoom();
+        getYams();
       }
     }
   }
@@ -119,7 +116,7 @@ public class Room3 {
       answer = answer.toLowerCase();
     }
     if (answer.equals('a' + "")) {
-      Room6.room6(3);
+      Room6.room6();
     }
     else {
       //use room4 method
