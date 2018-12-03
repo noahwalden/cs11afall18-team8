@@ -13,6 +13,9 @@ public class Room8 {
       Room1.room1();
     } else {
       RoomDescriptions.prisonCell();
+      if (!cardPickup) {
+        System.out.println("A keycard is resting on the ground.");
+      }
       chooseAction();
     }
   }
@@ -21,7 +24,7 @@ public class Room8 {
     hasExplored = true;
       System.out.println("What do you do?");
       System.out.println("  A) Look around for more details.");
-      System.out.println("  B) Exit through the door to the east.");
+      System.out.println("  B) Go through the cell door.");
       System.out.println("  C) Call for help.");
       if (!cardPickup) {
         System.out.println("  D) Pick up the keycard.");
@@ -30,7 +33,15 @@ public class Room8 {
 
       switch(answer) {
         case "a": lookAround(); break;
-        case "b": Room1.room1(); break; //Call to Room1 class file
+        case "b":
+          if (cardPickup) {
+            System.out.println("You swipe the keycard and the cell door swings open.");
+            Room1.room1();
+          } else {
+            System.out.println("The door is locked tight.");
+            chooseAction();
+          }
+          break; //Call to Room1 class file
         case "c": callHelp(); break;
         case "d":
           getKeycard(); break;
