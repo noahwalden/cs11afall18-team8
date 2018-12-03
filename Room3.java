@@ -4,8 +4,6 @@ public class Room3 {
 
   public static boolean hasExplored = false;
 
-  private static int lastRoom = 0;
-
   public static void room3(int previousRoom) {
     lastRoom = previousRoom;
     System.out.println();
@@ -101,15 +99,6 @@ public class Room3 {
     System.out.println("Congradulations.");
     System.out.println();
     leaveRoom();
-  }
-
-  private static void previousRoom() {
-    if (lastRoom == 6) {
-      Room6.room6(3);
-    }
-    else {
-      //use room2 method
-    }
   }
 
   private static void leaveRoom() {
