@@ -4,6 +4,8 @@ public class Room8 {
   public static boolean hasLooked = false;
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
+  public static boolean help = false;
+
 
   public static void room8() {
     System.out.println();
@@ -27,6 +29,7 @@ public class Room8 {
         System.out.println("  D) Pick up the keycard.");
       }
       answer = GameInput.letterInput();
+      System.out.println();
 
       switch(answer) {
         case "a": lookAround(); break;
@@ -62,9 +65,15 @@ public class Room8 {
   }
 
   private static void callHelp() {
-    String line = "You call out for help, but you receive no response other\n" +
-                  "than your own voice echoing back at you.\n";
-    System.out.println(line);
+    if (!help) {
+      String line = "You call out for help, but you receive no response other\n" +
+                    "than your own voice echoing back at you.\n";
+      System.out.println(line);
+
+    } else {
+      System.out.println("It's clear that no one is coming to help you.");
+      System.out.println();
+    }
     chooseAction();
   }
 }
