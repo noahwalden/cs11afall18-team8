@@ -18,6 +18,7 @@ public class Room4 {
     Scanner myScanner = new Scanner(System.in);
     roomDescription();
     String firstDecision = myScanner.nextLine();
+    firstDecision = firstDecision.toLowerCase();
     switch(firstDecision) {
       case "a": pressButton(); break;
       case "b": doNothing(); break;
@@ -53,6 +54,7 @@ public class Room4 {
     System.out.println("To make your way back to the surveillance room, press s.");
     System.out.println("To enter the sleeping quarters, press q.");
     String secondDecision = myScanner.nextLine();
+    secondDecision = secondDecison.toLowerCase();
     switch(secondDecision) {
       case "s": Room5.room5(); break;
       case "q": Room6.room6(); break;
