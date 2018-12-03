@@ -8,7 +8,7 @@ public class Room6 {
 
   private static int lastRoom = 0;
 
-  public static void room6(int previousRoom) {
+  public static void room6() {
     lastRoom = previousRoom;
     System.out.println();
     if (hasExplored) {
