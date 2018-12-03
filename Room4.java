@@ -21,6 +21,7 @@ public class Room4 {
     switch(firstDecision) {
       case "a": pressButton(); break;
       case "b": doNothing(); break;
+      default: "Invalid answer. Please input one of the two letters";
     }
     leaveRoom();
   }
@@ -55,6 +56,7 @@ public class Room4 {
     switch(secondDecision) {
       case "s": Room5.room5(); break;
       case "q": Room6.room6(); break;
+      default: "Invalid answer. Please input one of the two letters";
     }
   }
 }
