@@ -33,14 +33,13 @@ public class Room6 {
       System.out.println("  A) Look around for more details.");
       System.out.println("  B) Kill the alien in his sleep.");
       System.out.println("  C) Try to sneak past the alien.");
-      System.out.println("  D) Leave the way you came.");
       Scanner response = new Scanner(System.in);
       answer = response.nextLine();
       System.out.println();
       System.out.println();
       answer = answer.toLowerCase();
       while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
-      (!answer.equals('c' + "")) && (!answer.equals('d' + ""))) {
+      (!answer.equals('c' + ""))) {
         System.out.println("That answer is not valid. Please try again.");
         answer = response.nextLine();
         System.out.println();
@@ -60,11 +59,8 @@ public class Room6 {
       else if (answer.equals('b' + "")) {
         fightAlien();
       }
-      else if (answer.equals('c' + "")) {
-        sneakPast();
-      }
       else {
-        previousRoom();
+        sneakPast();
       }
     }
   }
@@ -116,18 +112,6 @@ public class Room6 {
     leaveRoom();
   }
 
-  private static void previousRoom() {
-    if (lastRoom == 3) {
-      Room3.room3(6);
-    }
-    else if (lastRoom == 4) {
-      //use room4 method
-    }
-    else {
-      Room7.room7(6);
-    }
-  }
-
   private static void leaveRoom() {
     hasExplored = true;
     System.out.println("Which door do you want to leave through?");
@@ -151,7 +135,7 @@ public class Room6 {
     //use room7 method
     }
     else if (answer.equals('b' + "")) {
-      Room3.room3(6);
+      Room3.room3();
     }
     else {
     //use room4 method

@@ -4,14 +4,14 @@ public class Room5 {
 
   public static boolean hasPressedButton = false;
 
-  public static void Room5(){
+  public static void room5(){
     System.out.println();
     if(hasPressedButton){
       System.out.println("There is nothing more to do in this room.");
       System.out.println();
       leaveRoom();
     }else{
-      Room5.action();
+      action();
     }
   }
 

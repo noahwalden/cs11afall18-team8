@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class Room7 {
-
+  public static boolean hasLooked = false;
+  public static boolean hasExplored = false;
+  public static boolean getbanana = false;
 
   public static void room7() {
     System.out.println();
