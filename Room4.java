@@ -51,7 +51,7 @@ public class Room4 {
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
     System.out.println("Do you:");
-    System.out.println(" A. Make your way back to the surveillance room, press s.");
+    System.out.println(" A. Make your way back to the surveillance room.");
     System.out.println(" B. Enter the sleeping quarters.");
     String secondDecision = myScanner.nextLine();
     secondDecision = secondDecision.toLowerCase();
