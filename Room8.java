@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Room8 {
+  public static boolean hasLooked = false;  
   public static boolean hasExplored = false;
   public static boolean cardPickup = false;
   public static boolean help = false;
@@ -9,7 +10,7 @@ public class Room8 {
     System.out.println();
     if (hasExplored) {
       System.out.printf("You have already explored this room.%n");
-      Room1.room1);
+      Room1.room1();
     } else {
       RoomDescriptions.prisonCell();
       chooseAction();
@@ -27,7 +28,6 @@ public class Room8 {
         System.out.println("  D) Pick up the keycard.");
       }
       answer = GameInput.letterInput();
-      System.out.println();
 
       switch(answer) {
         case "a": lookAround(); break;
@@ -42,7 +42,7 @@ public class Room8 {
     if (!hasLooked) {
       hasLooked = true;
       System.out.println("The cell is dimly lit. Through a small circular window,");
-      System.out.println("you're able to see the vast expanse of space.");
+      System.out.println("you're able to see the vast expanse of space.\n");
     } else {
       System.out.println("There's nothing else to see here.");
       System.out.println();
@@ -51,7 +51,7 @@ public class Room8 {
   }
 
   private static void getKeycard() {
-    if (cardPickup == false) {
+    if (!cardPickup) {
       cardPickup = true;
       System.out.println("You pick up the keycard.");
       System.out.println();
@@ -67,7 +67,6 @@ public class Room8 {
       String line = "You call out for help, but you receive no response other\n" +
                     "than your own voice echoing back at you.\n";
       System.out.println(line);
-
     } else {
       System.out.println("It's clear that no one is coming to help you.");
       System.out.println();
