@@ -65,7 +65,7 @@ private static void leaveRoom() {
     answer = answer.toLowerCase();
   }
   if (answer.equals('a' + "")) {
-    Room5.Action();
+    Room5.room5();
   }
   else if (answer.equals('b' + "")) {
     //use room7 method
