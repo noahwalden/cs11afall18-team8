@@ -131,13 +131,13 @@ public class Room6 {
       answer = answer.toLowerCase();
     }
     if (answer.equals('a' + "")) {
-    //use room7 method
+    Room7.room7();
     }
     else if (answer.equals('b' + "")) {
       Room3.room3();
     }
     else {
-    //use room4 method
+    Room4.room4();
     }
   }
 }
