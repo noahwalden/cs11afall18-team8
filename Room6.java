@@ -124,7 +124,7 @@ public class Room6 {
       //use room4 method
     }
     else {
-      //use room7 method
+      Room7.room7(6);
     }
   }
 
