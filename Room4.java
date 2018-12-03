@@ -56,7 +56,6 @@ public class Room4 {
     switch(secondDecision) {
       case "s": Room5.room5(); break;
       case "q": Room6.room6(); break;
-      case "b": Room1.room1(); break; //create room 2 class
     }
   }
 }
