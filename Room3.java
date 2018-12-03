@@ -28,14 +28,13 @@ public class Room3 {
       System.out.println("  A) Look around for more details.");
       System.out.println("  B) Sit down to eat with the alien.");
       System.out.println("  C) Raid the kitchen for yams.");
-      System.out.println("  D) Leave the way you came.");
       Scanner response = new Scanner(System.in);
       answer = response.nextLine();
       System.out.println();
       System.out.println();
       answer = answer.toLowerCase();
       while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
-      (!answer.equals('c' + "")) && (!answer.equals('d' + ""))) {
+      (!answer.equals('c' + ""))) {
         System.out.println("That answer is not valid. Please try again.");
         answer = response.nextLine();
         System.out.println();
