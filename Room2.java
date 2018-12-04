@@ -5,7 +5,7 @@ public class Room2 {
   public static boolean hasExplored = false;
   private static boolean hasEncountered = false;
   private static boolean hasYelled = false;
-  private static boolean isFinalBoss = false;
+  private static boolean isFinalBoss = true;
   private static int alienHP = 500;
   private static int alienPow = 50;
   private static Scanner myScanner = new Scanner(System.in);

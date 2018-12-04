@@ -18,7 +18,7 @@ public class ItemStats{
         break;
       case "fist":
         description = "Your inventory is empty! You'll have to use your fists!";
-        power = 0;
+        power = 20;
         break;
     }
   }
