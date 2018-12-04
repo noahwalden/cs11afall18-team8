@@ -80,6 +80,7 @@ public class Room2 {
   }
 
   private static void finalBossSequence() {
+    Game.clearConsole();
     System.out.println("You muster up the courage to explore the room.");
     System.out.println("You walk around the room until you bump into something.");
     System.out.println("...");
@@ -91,36 +92,75 @@ public class Room2 {
     Game.clearConsole();
     Combat.fight(alienHP, alienPow, isFinalBoss);
     Game.clearConsole();
+    hasExplored = true;
     endSequence();
   }
 
   private static void endSequence() {
-    hasExplored = true;
-    System.out.println("Which door do you want to leave through?");
-    System.out.println("  A) The Eastern door");
-    System.out.println("  B) The Southern door");
-    System.out.println("  C) The Western door");
-    Scanner input = new Scanner(System.in);
-    String answer = input.nextLine();
-    System.out.println();
-    System.out.println();
-    answer = answer.toLowerCase();
-    while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
-    (!answer.equals('c' + ""))) {
-      System.out.println("That answer is not valid. Please try again.");
-      answer = input.nextLine();
+    Game.clearConsole();
+    System.out.println("After beating the alien, you run through a path that had just opened up.");
+    System.out.println("Your keep running for what seems like ages until you reach a small room.");
+    System.out.println("In this room, there is what looks to be a clear crystal platform you can stand on, with a button next to it.");
+    finalChoice();
+  }
+
+  private static void finalChoice(){
+    String answer = "a";
+    while (answer.equals('a' + "")) {
+      System.out.println("What do you do?");
+      System.out.println("  A) Step onto the pad and press the button.");
+      System.out.println("  B) Turn back and stay on the ship.");
+      Scanner response = new Scanner(System.in);
+      answer = response.nextLine();
       System.out.println();
       System.out.println();
       answer = answer.toLowerCase();
+      while ((!answer.equals('a' + "")) && (!answer.equals('b' + ""))) {
+        System.out.println("That answer is not valid. Please try again.");
+        answer = response.nextLine();
+        System.out.println();
+        System.out.println();
+        answer = answer.toLowerCase();
+      }
+      if(answer.equals('a' + "")){
+        Game.clearConsole();
+        System.out.println("You decide to get on the pad and press the button.");
+        System.out.println("All you see is a bright blinding light and you feel as if you are floating.");
+        System.out.println("After some time, you fall onto the ground with considerable force.");
+        System.out.println("You then realize that you're back at your house and you walk in..");
+        System.out.println("Your friends are still there watching the game and as you go to sit down they as you:");
+        System.out.println("'Where's the chips and dip?'");
+        System.out.print("Press <enter> to continue...");
+        String uselessVariable = myScanner.nextLine();
+        end();
+      }
+      if(answer.equals('b' + "")){
+        System.out.println("You think to yourself: 'No way I'm getting on that thing!' and decide to stay on the ship.");
+        System.out.println("You walk back to where you fought the final alien and you see other aliens gathering around the body.");
+        System.out.println("They turn to you, and before you had a chance to react they...");
+        System.out.println("Bow to you!?");
+        System.out.println("It seems that whoever kills their leader is crowned as the new one.");
+        System.out.println("As their new leader, you quickly become accustomed to their language and culture.");
+        System.out.println("You see no reason to return to earth so you stay with your new alien bretheren.");
+        System.out.println("Meanwhile, your friends on earth are wondering why you're taking so long to get the chips and dip.");
+        System.out.print("Press <enter> to continue...");
+        String uselessVariable = myScanner.nextLine();
+        System.out.println("Meanwhile, your friends on earth are wondering why you're taking so long to get the chips and dip.");
+        end();
+      }
     }
-    if (answer.equals('a' + "")) {
-      Room7.room7();
-    }
-    else if (answer.equals('b' + "")) {
-      Room3.room3();
-    }
-    else {
-      Room4.room4();
-    }
+  }
+
+  private static void end(){
+    Game.clearConsole();
+    System.out.println("Thank you for playing!");
+    System.out.println("Credits:");
+    System.out.println("Martin Sipowicz");
+    System.out.println("Elijah Miller");
+    System.out.println("Noah Walden");
+    System.out.println("Charles Beyrard");
+    System.out.println("Lisandro Mayancela");
+    System.out.print("Press <enter> to end...");
+    String uselessVariable = myScanner.nextLine();
   }
 }
