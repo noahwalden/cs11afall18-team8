@@ -37,6 +37,7 @@ public class Room8 {
         case "b":
           if (cardPickup) {
             System.out.println("You swipe the keycard and the cell door swings open.");
+            Combat.randomEncounter();
             Room1.room1();
           } else {
             System.out.println("The door is locked tight.");

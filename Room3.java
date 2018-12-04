@@ -113,11 +113,12 @@ public class Room3 {
       System.out.println();
       answer = answer.toLowerCase();
     }
+    Combat.randomEncounter();
     if (answer.equals('a' + "")) {
       Room6.room6();
     }
     else {
-      Room4.room4();
+      Room2.room2();
     }
   }
 }
