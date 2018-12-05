@@ -6,6 +6,7 @@ public class Room6 {
   private static int alienHP = 100;
   private static int alienPow = 30;
   private static boolean isFinalBoss = false;
+  private static boolean havePipe = false;
 
   private static int lastRoom = 0;
 
@@ -45,7 +46,7 @@ public class Room6 {
         answer = answer.toLowerCase();
       }
       if (answer.equals('a' + "")) {
-        if (!hasLooked) {
+        if (!hasLooked || !havePipe) {
           lookAround();
           hasLooked = true;
         }
@@ -80,6 +81,7 @@ public class Room6 {
     }
     if (answer.equals('a' + "")) {
       Inventory.addToInventory("lead pipe");
+      havePipe = true;
     }
   }
 
