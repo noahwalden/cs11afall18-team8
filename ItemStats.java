@@ -20,8 +20,8 @@ public class ItemStats{
         description = "Your inventory is empty! You'll have to use your fists!";
         power = 20;
         break;
-      case "pumpkin"
-        description = "You pull out the pumpkin, hoping to spook the alien. It doesn't work."
+      case "pumpkin":
+        description = "You pull out the pumpkin, hoping to spook the alien. It doesn't work.";
         power = 10;
         break;
     }
