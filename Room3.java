@@ -1,5 +1,11 @@
 import java.util.Scanner;
+/* Author: Elijah Miller
+This is the cafeteria.
 
+
+
+There is no violence in the cafeteria
+*/
 public class Room3 {
 
   public static boolean hasExplored = false;
@@ -17,7 +23,7 @@ public class Room3 {
       System.out.println("An alien sits at a table eating a piece of apple strudel.");
       firstChoice();
     }
-  }
+  } //end of method
 
   private static void firstChoice() {
     boolean hasLooked = false;
@@ -55,7 +61,7 @@ public class Room3 {
         getYams();
       }
     }
-  }
+  } //end of method
 
   private static void lookAround() {
     System.out.println("You look around and see a pumpkin on the table.");
@@ -78,13 +84,13 @@ public class Room3 {
       hasPumpkin = true;
       Inventory.addToInventory("pumpkin");
     }
-  }
+  } //end of method
 
   private static void sitDown() {
     System.out.println("You get yourself a piece of strudel and");
     System.out.println("have a nice lunch with the alien.");
     leaveRoom();
-  }
+  } //end of method
 
   private static void getYams() {
     int yams = (int)Math.floor(Math.random()*6.0);
@@ -93,10 +99,10 @@ public class Room3 {
     System.out.println("Congradulations.");
     System.out.println();
     leaveRoom();
-  }
+  } //end of method
 
-  private static void leaveRoom() {
-    hasExplored = true;
+  private static void leaveRoom() { //method to bring up the exit options
+    hasExplored = true; //hasExplored is assigned the value true once the player decides to leave the room
     System.out.println("Which door do you want to leave through?");
     System.out.println("  A) The northern door");
     System.out.println("  B) The western door");
@@ -114,10 +120,10 @@ public class Room3 {
     }
     Combat.randomEncounter();
     if (answer.equals('a' + "")) {
-      Room6.room6();
+      Room6.room6(); //call to room 6
     }
     else {
-      Room2.room2();
+      Room2.room2(); //call to room 2
     }
-  }
-}
+  } //end of method
+} //end of class

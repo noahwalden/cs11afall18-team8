@@ -23,7 +23,7 @@ public class Room6 {
       System.out.println("An alien sleeps in one of the beds across the room.");
       firstChoice();
     }
-  }
+  } //end of method
 
   private static void firstChoice() {
     boolean hasLooked = false;
@@ -61,7 +61,8 @@ public class Room6 {
         sneakPast();
       }
     }
-  }
+  } //end of method
+
   private static void lookAround() {
     System.out.println("You look around and see a lead pipe on the floor.");
     System.out.println("Do you pick it up?");
@@ -83,7 +84,7 @@ public class Room6 {
       Inventory.addToInventory("lead pipe");
       havePipe = true;
     }
-  }
+  } //end of method
 
   private static void sneakPast() {
     System.out.println("You attempt to sneak past the alien.");
@@ -95,12 +96,12 @@ public class Room6 {
     else {
       fightAlien();
     }
-  }
+  } //end of method
 
   private static void sneakSuccess() {
     System.out.println("You successfully sneak past the alien!");
     leaveRoom();
-  }
+  } //end of method
 
   private static void fightAlien() {
     Game.clearConsole();
@@ -109,9 +110,9 @@ public class Room6 {
     System.out.println();
     Combat.fight(alienHP, alienPow, isFinalBoss);
     leaveRoom();
-  }
+  } //end of method
 
-  private static void leaveRoom() {
+  private static void leaveRoom() { //method to leave the room
     hasExplored = true;
     System.out.println("Which door do you want to leave through?");
     System.out.println("  A) The eastern door");
@@ -137,5 +138,5 @@ public class Room6 {
     else {
       Room4.room4();
     }
-  }
-}
+  } //end of method
+} //end of method
