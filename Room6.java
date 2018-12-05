@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/* Author: Elijah Miller
+This is the sleeping quarters.
+*/
 public class Room6 {
 
   public static boolean hasExplored = false;
