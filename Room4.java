@@ -1,8 +1,10 @@
+//Ship's Weapon System.
 import java.util.Scanner;
 public class Room4 {
 
   public static boolean hasDestroyedEarth = false;
 
+//method which determines if user should or shouldn't go back into the room
   public static void room4() {
     System.out.println();
     if(hasDestroyedEarth){
@@ -14,6 +16,7 @@ public class Room4 {
     }
   }
 
+//user enters the room
   private static void action(){
     Scanner myScanner = new Scanner(System.in);
     roomDescription();
@@ -28,6 +31,7 @@ public class Room4 {
     leaveRoom();
   }
 
+//introduction
   private static void roomDescription(){
     System.out.println();
     System.out.println("Ship's Weapon System");
@@ -38,16 +42,19 @@ public class Room4 {
     System.out.println(" B) Leave it be and move on.");
   }
 
+//Option A
   private static void pressButton(){
     hasDestroyedEarth = true;
     System.out.println("The target was Earth. You just killed 7 billion people.");
     System.out.println("You hear mumbling, the sound of which is increasing. You must leave.");
   }
 
+//Option B
   private static void doNothing(){
     System.out.println("You hear mumbling, the sound of which is increasing. You must leave.");
   }
 
+//method to leave room
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
     System.out.println("Do you:");
