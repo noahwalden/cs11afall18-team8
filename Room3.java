@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Room3 {
 
   public static boolean hasExplored = false;
+  public static boolean hasPumpkin = false;
 
   public static void room3() {
     System.out.println();
@@ -14,7 +15,6 @@ public class Room3 {
     else {
       System.out.println("You've found the cafeteria!");
       System.out.println("An alien sits at a table eating a piece of apple strudel.");
-      System.out.println();
       firstChoice();
     }
   }
@@ -41,13 +41,11 @@ public class Room3 {
         answer = answer.toLowerCase();
       }
       if (answer.equals('a' + "")) {
-        if (!hasLooked) {
+        if (hasLooked && hasPumpkin) {
+          System.out.println("There's nothing else to see here.");
+        } else {
           lookAround();
           hasLooked = true;
-        }
-        else {
-          System.out.println("There's nothing else to see here.");
-          System.out.println();
         }
       }
       else if (answer.equals('b' + "")) {
@@ -77,6 +75,7 @@ public class Room3 {
       answer = answer.toLowerCase();
     }
     if (answer.equals('a' + "")) {
+      hasPumpkin = true;
       Inventory.addToInventory("pumpkin");
     }
   }
@@ -99,8 +98,8 @@ public class Room3 {
   private static void leaveRoom() {
     hasExplored = true;
     System.out.println("Which door do you want to leave through?");
-    System.out.println("  A) The Northern door");
-    System.out.println("  B) The Western door");
+    System.out.println("  A) The northern door");
+    System.out.println("  B) The western door");
     Scanner input = new Scanner(System.in);
     String answer = input.nextLine();
     System.out.println();

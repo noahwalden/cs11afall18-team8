@@ -53,7 +53,6 @@ public class Room5 {
 
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
-    System.out.println();
     System.out.println("Do you:");
     System.out.println(" A) Go through the South door.");
     System.out.println(" B) Return to the Barracks.");

@@ -18,6 +18,7 @@ public class Room4 {
     Scanner myScanner = new Scanner(System.in);
     roomDescription();
     String firstDecision = myScanner.nextLine();
+    System.out.println();
     firstDecision = firstDecision.toLowerCase();
     switch(firstDecision) {
       case "a": pressButton(); break;

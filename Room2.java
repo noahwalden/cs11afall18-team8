@@ -38,7 +38,6 @@ public class Room2 {
       Scanner response = new Scanner(System.in);
       answer = response.nextLine();
       System.out.println();
-      System.out.println();
       answer = answer.toLowerCase();
       while ((!answer.equals('a' + "")) && (!answer.equals('b' + ""))) {
         System.out.println("That answer is not valid. Please try again.");
@@ -55,7 +54,6 @@ public class Room2 {
         }
         else {
           System.out.println("You've already done that.");
-          System.out.println();
         }
       }
       else if (answer.equals('b' + "")) {
@@ -78,6 +76,7 @@ public class Room2 {
     System.out.println("No response...");
     System.out.print("Press <enter> to continue...");
     String uselessVariable = myScanner.nextLine();
+    System.out.println();
   }
 
   private static void finalBossSequence() {

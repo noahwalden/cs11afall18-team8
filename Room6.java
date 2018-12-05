@@ -119,8 +119,6 @@ public class Room6 {
     System.out.println("  C) The western door");
     Scanner input = new Scanner(System.in);
     String answer = input.nextLine();
-    System.out.println();
-    System.out.println();
     answer = answer.toLowerCase();
     while ((!answer.equals('a' + "")) && (!answer.equals('b' + "")) &&
     (!answer.equals('c' + ""))) {
