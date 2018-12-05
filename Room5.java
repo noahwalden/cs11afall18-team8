@@ -4,6 +4,7 @@ public class Room5 {
 
   public static boolean hasPressedButton = false;
 
+  //method which determines if user should or shouldn't go back into the room
   public static void room5(){
     System.out.println();
     if(hasPressedButton){
@@ -15,6 +16,7 @@ public class Room5 {
     }
   }
 
+  //user enters the room
   private static void action() {
     Scanner myScanner = new Scanner(System.in);
     roomDescription();
@@ -28,6 +30,7 @@ public class Room5 {
     leaveRoom();
   }
 
+ //introduction
   private static void roomDescription(){
     System.out.println();
     System.out.println("Surveillance Room");
@@ -38,6 +41,8 @@ public class Room5 {
     System.out.println(" A) Press the button.");
     System.out.println(" B) Leave it alone.");
   }
+
+  //if user presses button
   private static void pressButton(){
     hasPressedButton = true;
     System.out.println();
@@ -45,12 +50,14 @@ public class Room5 {
     System.out.println("You hear footsteps. It's time to go.");
   }
 
+  //if user does nothing
   private static void doNothing(){
     System.out.println();
     System.out.println("You watch the screen and notice guards may be coming");
     System.out.println("your way. It's time to go.");
   }
 
+  //method to leave room
   private static void leaveRoom(){
     Scanner myScanner = new Scanner(System.in);
     System.out.println("Do you:");
