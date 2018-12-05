@@ -144,7 +144,7 @@ public class Inventory {
       return "fist";
     }
     while (true) {
-      System.out.print("Enter the number of the inventory slot whose item you'd like to use: ");
+      System.out.print("Enter the number of the inventory slot whose item you'd like to use (Choosing an empty slot will use fists): ");
       Scanner input = new Scanner(System.in);
       int slot = input.nextInt();
       System.out.println();
@@ -156,8 +156,7 @@ public class Inventory {
         System.out.println();
       }
       if (inventory[slot-1].equalsIgnoreCase("empty")) {
-        System.out.println("There is nothing in this slot!");
-        System.out.println("Please pick a different slot.");
+        return "fist";
       }
       else {
         return inventory[slot-1];

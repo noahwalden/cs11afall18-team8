@@ -50,7 +50,7 @@ public class Combat{
     System.out.println("The alien swings in retaliation!");
     System.out.println();
     int damage =  defense - ((int)Math.floor(Math.random()*6.0) + alienPow);
-    if(damage <= 0){
+    if(damage > 0){
       System.out.println("The alien is too weak to damage you!");
     } else {
       health = health + damage;

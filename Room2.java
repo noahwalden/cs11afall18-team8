@@ -133,6 +133,7 @@ public class Room2 {
         System.out.print("Press <enter> to continue...");
         String uselessVariable = myScanner.nextLine();
         end();
+        answer = "";
       }
       if(answer.equals('b' + "")){
         System.out.println("You think to yourself: 'No way I'm getting on that thing!' and decide to stay on the ship.");
@@ -147,6 +148,7 @@ public class Room2 {
         String uselessVariable = myScanner.nextLine();
         System.out.println("Meanwhile, your friends on earth are wondering why you're taking so long to get the chips and dip.");
         end();
+        answer = "";
       }
     }
   }
@@ -162,5 +164,6 @@ public class Room2 {
     System.out.println("Lisandro Mayancela");
     System.out.print("Press <enter> to end...");
     String uselessVariable = myScanner.nextLine();
+    return;
   }
 }
