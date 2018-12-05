@@ -20,19 +20,7 @@ public class Combat{
         totalDamage = 0;
         System.out.println("It does nothing... The alien starts laughing at you.");
       } else {
-        Game.clearConsole();
-        System.out.println("The alien picks up the banana and eats it.");
-        System.out.println("It's face begins to turn blue as it cannot breathe.");
-        System.out.println("...");
-        System.out.println("The alien dies from a potassium allergy?");
-        System.out.println();
-        System.out.println("You feel a little healthier after the fight. Your health and resistance to damage have increased!");
-        System.out.println();
-        health = health + ((hp/5) + (int)Math.floor(Math.random()*6.0));
-        defense = defense + hp/5;
-        System.out.println("HP Remaining: "+ health);
-        System.out.println("Current Defense: "+ defense);
-        return;
+        finalBossBanana(hp);
       }
     }
     int healthRemaining = hp - totalDamage;
@@ -45,15 +33,15 @@ public class Combat{
       Game.clearConsole();
       fight(healthRemaining, pow, false);
     } else {
-    System.out.println("The alien is dead!");
-    System.out.println();
-    System.out.println("You feel a little healthier after the fight. Your health and resistance to damage have increased!");
-    System.out.println();
-    health = health + ((hp/5) + (int)Math.floor(Math.random()*6.0));
-    defense = defense + hp/5;
-    System.out.println("HP Remaining: "+ health);
-    System.out.println("Current Defense: "+ defense);
-    System.out.println();
+      System.out.println("The alien is dead!");
+      System.out.println();
+      System.out.println("You feel a little healthier after the fight. Your health and resistance to damage have increased!");
+      System.out.println();
+      health = health + ((hp/5) + (int)Math.floor(Math.random()*6.0));
+      defense = defense + hp/5;
+      System.out.println("HP Remaining: "+ health);
+      System.out.println("Current Defense: "+ defense);
+      System.out.println();
     }
   }
 
@@ -62,16 +50,51 @@ public class Combat{
     System.out.println("The alien swings in retaliation!");
     System.out.println();
     int damage =  defense - ((int)Math.floor(Math.random()*6.0) + alienPow);
-    health = health + damage;
-    System.out.println("You took "+ damage/-1 +" points of damage!");
-    if (health<=0) {
-      System.out.println("You died. Beter luck next time!");
-      return;
+    if(damage <= 0){
+      System.out.println("The alien is too weak to damage you!");
+    } else {
+      health = health + damage;
+      System.out.println("You took "+ damage/-1 +" points of damage!");
+    }
+    if(health <= 0){
+      System.out.println("You have no health remaining!");
     } else {
       System.out.println("You now have "+ health +" health remaining!");
-      System.out.println("Press <enter> to continue...");
-      String uselessVariable = myScanner.nextLine();
     }
+    System.out.println("Press <enter> to continue...");
+    String uselessVariable = myScanner.nextLine();
+    if(health <= 0){
+      die();
+    }
+  }
+
+  private static void die(){
+    Scanner myScanner = new Scanner(System.in);
+    System.out.println("You pass out from your injuries...");
+    System.out.println("After some time, you wake up in the Jailcell");
+    System.out.println("Press <enter> to continue...");
+    String uselessVariable = myScanner.nextLine();
+    health = 100;
+    Room8.room8();
+  }
+
+  private static void finalBossBanana(int hp){
+    Scanner myScanner = new Scanner(System.in);
+    Game.clearConsole();
+    System.out.println("The alien picks up the banana and eats it.");
+    System.out.println("It's face begins to turn blue as it cannot breathe.");
+    System.out.println("...");
+    System.out.println("The alien dies from a potassium allergy?");
+    System.out.println("...");
+    System.out.println("You feel a little healthier after the fight. Your health and resistance to damage have increased!");
+    System.out.println();
+    health = health + ((hp/5) + (int)Math.floor(Math.random()*6.0));
+    defense = defense + hp/5;
+    System.out.println("HP Remaining: "+ health);
+    System.out.println("Current Defense: "+ defense);
+    System.out.println("Press <enter> to continue...");
+    String uselessVariable = myScanner.nextLine();
+    return;
   }
 
   public static void randomEncounter() {
